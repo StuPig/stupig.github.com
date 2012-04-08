@@ -1,19 +1,23 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://stupig.me/blog/2012/04/08/hello-world/</loc>
-        <lastmod>2012-04-08T17:38:34+08:00</lastmod>
-    </url>
-    <url>
         <loc>http://stupig.me/</loc>
-        <lastmod>2012-04-08T17:26:57+08:00</lastmod>
+        <lastmod>2012-04-08T18:13:08+08:00</lastmod>
     </url>
     <url>
         <loc>http://stupig.me/drafts/outsource-your-blog.html</loc>
-        <lastmod>2012-04-08T17:38:34+08:00</lastmod>
+        <lastmod>2012-04-08T18:13:08+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://stupig.me/404.html</loc>
+        <lastmod>2012-04-08T19:39:31+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://stupig.me/robots.txt</loc>
+        <lastmod>2012-04-08T19:38:33+08:00</lastmod>
     </url>
     <url>
         <loc>http://stupig.me/archive/2012/2012.html</loc>
-        <lastmod>2012-04-08T16:07:43+08:00</lastmod>
+        <lastmod>2012-04-08T18:13:08+08:00</lastmod>
     </url>
 </urlset>
