@@ -1,0 +1,23 @@
+
+---
+layout: post
+title: "StringBuffer&StringBuilder详解"
+category: test
+tags:
+ - test
+keywords: test
+---
+{% highlight js linenos %}
+var a = 1;
+function test() {
+    alert(1);
+}
+{% endhighlight %}
+
+ruby:
+
+{% highlight ruby %}
+def foo
+  puts 'foo'
+end
+{% endhighlight %}

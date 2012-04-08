@@ -8,7 +8,7 @@ layout: nil
  <link href="http://stupig.me/atom.xml" rel="self"/>
  <link href="http://stupig.me/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://stupig.github.com/</id>
+ <id>http://stupig.me/</id>
  <author>
    <name>StuPig.Gong</name>
    <email>shouqiang.gong@gmail.com</email>
@@ -19,7 +19,7 @@ layout: nil
    <title>{{ post.title }}</title>
    <link href="http://stupig.me{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://stupig.github.com{{ post.id }}</id>
+   <id>http://stupig.me{{ post.id }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endfor %}
