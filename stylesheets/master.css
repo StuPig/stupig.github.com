@@ -76,6 +76,8 @@ a:visited {
 #menu ul li a#twitter_link { background-image: url(/images/twitter.png); }
 #menu ul li a#github_link { background-image: url(/images/github.png); }
 #menu ul li a#home_link { background-image: url(/images/home.png); }
+#menu ul li a#aboutme_link { background-image: url(/images/aboutme.png); }
+#menu ul li a#stackoverflow_link { background-image: url(/images/stackoverflow.png); }
 
 #content {
   padding-top: 0.5em;
