@@ -1,18 +1,18 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://stupig.me/blog/2012/02/02/1/</loc>
-        <lastmod>2012-04-09T01:40:37+08:00</lastmod>
-    </url>
-    <url>
         <loc>
             http://stupig.me/blog/2012/04/08/%E4%B8%8E%E5%AE%B6%E4%BA%BA%E8%B0%88%E8%AF%9D%E5%90%8E/
         </loc>
-        <lastmod>2012-04-09T01:32:50+08:00</lastmod>
+        <lastmod>2012-04-09T11:19:00+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://stupig.me/blog/2012/04/09/%E5%BC%95%E6%B8%A1/</loc>
+        <lastmod>2012-04-09T11:18:49+08:00</lastmod>
     </url>
     <url>
         <loc>http://stupig.me/</loc>
-        <lastmod>2012-04-09T01:40:37+08:00</lastmod>
+        <lastmod>2012-04-09T11:19:00+08:00</lastmod>
     </url>
     <url>
         <loc>http://stupig.me/drafts/outsource-your-blog.html</loc>
@@ -20,7 +20,7 @@
     </url>
     <url>
         <loc>http://stupig.me/404.html</loc>
-        <lastmod>2012-04-09T01:32:50+08:00</lastmod>
+        <lastmod>2012-04-09T11:23:26+08:00</lastmod>
     </url>
     <url>
         <loc>http://stupig.me/robots.txt</loc>
