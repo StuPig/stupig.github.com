@@ -1,5 +1,7 @@
 pygments:	true
-markdown: redcloth
+#markdown: redcloth
+# this is comfusing, u can not del above line, or ur chinese markdown list will not render unnormal
+markdown: rdiscount
 paginate: 5
 regeneration: true
 lsi: true
