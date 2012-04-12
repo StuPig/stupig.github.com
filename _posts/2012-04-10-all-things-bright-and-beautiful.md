@@ -4,6 +4,7 @@ title: "all things bright and beautiful"
 description: ""
 category: life
 tags: [life,soul,growth,trouble,upset,stupig]
+keywords: 生活，成长，烦恼，沮丧，豁达，放下
 ---
 *前言*
 
