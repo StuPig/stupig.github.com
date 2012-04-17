@@ -1,6 +1,6 @@
 pygments:	true
 #markdown: redcloth
-# this is comfusing, u can not del above line, or ur chinese markdown list will not render unnormal
+# this is comfusing, u can not delete above line, or ur chinese markdown list will not render unnormal
 markdown: rdiscount
 paginate: 5
 regeneration: true
