@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/GozapWebDocs/!svn/ver/251/%E5%89%8D%E7%AB%AF/jQuery-Template/wwwroot/jq-tmpl
+END
+tmpl6-{{tmpl}}.html
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/GozapWebDocs/!svn/ver/251/%E5%89%8D%E7%AB%AF/jQuery-Template/wwwroot/jq-tmpl/tmpl6-%7B%7Btmpl%7D%7D.html
+END
+tmpl3-{{if}}-{{html}}.html
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/GozapWebDocs/!svn/ver/251/%E5%89%8D%E7%AB%AF/jQuery-Template/wwwroot/jq-tmpl/tmpl3-%7B%7Bif%7D%7D-%7B%7Bhtml%7D%7D.html
+END
+tmpl4-{{each}}.html
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/GozapWebDocs/!svn/ver/251/%E5%89%8D%E7%AB%AF/jQuery-Template/wwwroot/jq-tmpl/tmpl4-%7B%7Beach%7D%7D.html
+END
+tmpl8-ajax.html
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/GozapWebDocs/!svn/ver/251/%E5%89%8D%E7%AB%AF/jQuery-Template/wwwroot/jq-tmpl/tmpl8-ajax.html
+END
+index.html
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/GozapWebDocs/!svn/ver/251/%E5%89%8D%E7%AB%AF/jQuery-Template/wwwroot/jq-tmpl/index.html
+END
+tmpl1-tmpl().html
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/GozapWebDocs/!svn/ver/251/%E5%89%8D%E7%AB%AF/jQuery-Template/wwwroot/jq-tmpl/tmpl1-tmpl().html
+END
+tmpl2-tmplItem().html
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/GozapWebDocs/!svn/ver/251/%E5%89%8D%E7%AB%AF/jQuery-Template/wwwroot/jq-tmpl/tmpl2-tmplItem().html
+END
+tmpl0-basic-sample.html
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/GozapWebDocs/!svn/ver/251/%E5%89%8D%E7%AB%AF/jQuery-Template/wwwroot/jq-tmpl/tmpl0-basic-sample.html
+END
+tmpl7-{{wrap}}.html
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/GozapWebDocs/!svn/ver/251/%E5%89%8D%E7%AB%AF/jQuery-Template/wwwroot/jq-tmpl/tmpl7-%7B%7Bwrap%7D%7D.html
+END
+tmpl9-php.html
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/GozapWebDocs/!svn/ver/251/%E5%89%8D%E7%AB%AF/jQuery-Template/wwwroot/jq-tmpl/tmpl9-php.html
+END
+tmpl5-template().html
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/GozapWebDocs/!svn/ver/251/%E5%89%8D%E7%AB%AF/jQuery-Template/wwwroot/jq-tmpl/tmpl5-template().html
+END
