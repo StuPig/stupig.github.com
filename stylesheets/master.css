@@ -650,3 +650,7 @@ img.img-left {
 #not_found {
   margin-left: 120px;
 }
+
+.aboutme {clear:both}
+.aboutme * {border: 0px solid;}
+.aboutme img {padding:0px;}
