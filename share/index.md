@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: "StuPig的调研和分享"
 description: "StuPig的调研和分享"
 ---
