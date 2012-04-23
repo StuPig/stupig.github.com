@@ -5,7 +5,7 @@
   <title>巩守强的个人简历</title>
   <meta name="keywords" content="前端简历,前端开发工程师,html,css,js,ajax,nodejs,coffeescript,找工作,应聘" />
   <mata name="author" content="StuPig,shouqiang.gong@gmail.com" />
-  <meta name="description" content="StuPig de ge ren jian li" />
+  <meta name="description" content="StuPig的个人简历" />
   <style>
   body,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,p,form,fieldset,legend,input,img{margin:0;padding:0;}
   img,fieldset{border:0 none;}
@@ -46,7 +46,7 @@
 <!--[if IE]>
 <div id="tips">此页面为html5+CSS3，推荐使用FF3.6+或者Chrome浏览，以获得最佳浏览效果</div>
 <![endif]-->
-<div id="container">
+<article id="container">
   <header>
     <h1>个人简历<strong> - 巩 守强</strong></h1>
     <div class="avatar">
@@ -54,11 +54,10 @@
     </div>
     <ul class="detail">
       <li>性别：男</li>
-      <li>Email：<a href="mailto:shouqiang.gong@gmail.com" title="给我发邮件！">shouqiang.gong@gmail.com</a></li>
+      <li>Email：<a href="mailto:shouqiang.gong@gmail.com" title="mail to me!">shouqiang.gong@gmail.com</a></li>
       <li>出生年月：1988/01/18</li>
     </ul>
     <ul class="blog">
-      <li>出生年月：1988/01/18</li>
       <li>new blog：<a href="http://stupig.me" title="StuPig's life | new blog">stupig.me</a></li>
       <li>old blog：<a href="http://stupig.shop.co" title="StuPig's simple life">stupig.shop.co</a></li>
     </ul>
@@ -68,7 +67,7 @@
       <li><a href="http://stackoverflow.com/users/1251340/stupig" title="StuPig on stackoverflow">stackoverflow</a></li>
     </ul>
   </header>
-  <section id="content">
+  <article id="content">
     <section>
       <h2>技能</h2>
       <ul>
@@ -124,7 +123,7 @@
       <p>大三 --- <strong>学生会副主席</strong></p>
       <p>大一到大三 --- <strong>班长</strong></p>
     </section>
-  </section>
-</div>
+  </article>
+</article>
 </body>
 </html>
