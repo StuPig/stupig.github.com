@@ -87,7 +87,7 @@
       <h3>-至今 前端工程师 | 格致璞(<a href="http://www.gozap.com" target="_blank" title="格致璞">gozap.com</a>)</h3>
       <ol>
         <li>负责<a href="http://www.labi.com/calendar" title="蜡笔日历" target="_blank">蜡笔日历</a>web端的前端架构、开发和前后端数据交互规范的制定</li>
-        <li>负责<a href="http://www.labi.com/album" title="蜡笔相册" target="_blank">蜡笔相册</a>web端开发</li>
+        <li>负责<a href="http://www.labi.com/albums" title="蜡笔相册" target="_blank">蜡笔相册</a>web端开发</li>
         <li>负责comet多标签页共享长链接的开发</li>
         <li><a href="http://www.hualala.com" target="_blank">hualala.com</a>前端性能分析</li>
         <li>负责<a href="http://stupig.me/share/jquery-updates-info" target="_blank" title="jQuery1.4 - 1.7的主要更新">jQuery1.4 - 1.7的主要更新</a>的调研和分享</li>
@@ -104,18 +104,18 @@
     </section>
     <section>
       <h2>主要项目开发经历</h2>
-      <h3>蜡笔日历</h3>
+      <h3><a href="http://www.labi.com/calendar" title="蜡笔日历" target="_blank">蜡笔日历</a></h3>
       <p>js架构搭建，数据驱动，利用jQuery Template模版渲染前端页面，利用分层加载减少用户等待时间，不同视图数据适配，日程项托拽、添加、修改、删除、和ajax无刷新页面等功能</p>
       <h3>多标签页共享comet</h3>
       <p>操作不同浏览器的缓存（localstorage、userdata等），保持多个标签页有且只有一个长链接</p>
-      <h3><a href="https://github.com/StuPig/tooltip" target="_blank" title="公农历互转组件">公农历互转组件</a></h3>
+      <h3><a href="https://github.com/StuPig/calendar-converter" target="_blank" title="公农历互转组件">公农历互转组件</a></h3>
       <p>实现1900-2050年之间公农历相互转换，获取节假日、节气、闰年、闰月等信息</p>
-      <h3><a href="https://github.com/StuPig/calendar-converter" target="_blank" title="自适应位置的提示弹窗">自适应位置的提示弹窗</a></h3>
+      <h3><a href="https://github.com/StuPig/tooltip" target="_blank" title="自适应位置的提示弹窗">自适应位置的提示弹窗</a></h3>
       <p>根据鼠标当前位置、提示框尺寸和容器的尺寸，调整提示框位置和样式</p>
-      <h3>蜡笔相册</h3>
+      <h3><a href="http://www.labi.com/albums" title="蜡笔相册" target="_blank">蜡笔相册</a></h3>
       <p>页面构建，图片延迟加载</p>
       <h3>Open Social类SNS平台开放API接入</h3>
-      <p>将公司游戏接入到SNS平台，阅读文档，调用平台API（前端js，后端java），最终实现游戏在SNS平台正常取得用户和好友信息，发送和接收feed，发送和接收message，发送和接受礼物。并协助Data Center做好日志，进行数据分析</p>
+      <p>将公司游戏接入到SNS平台，阅读文档，调用平台API（前端js，后端java）。前端为notification,showinvite,present,postfeed。后端为appinfo,userinfo,userfriendlist等。最终实现游戏在SNS平台正常取得用户和好友信息，发送和接收feed，发送和接收message，发送和接受礼物。并协助Data Center做好日志，进行数据分析</p>
     </section>
     <section>
       <h2>其他技能和经历</h2>
