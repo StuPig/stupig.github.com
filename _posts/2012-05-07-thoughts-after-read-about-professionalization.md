@@ -6,7 +6,12 @@ layout: post
 title: "读《关于“职业化”的思考》有感（“Geek”与“产品机器”）"
 description: "读《关于“职业化”的思考》有感"
 category: work
-tags: [thoughts,professionalization,responsibility,trusted,initiative]
+tags:
+ - thoughts
+ - professionalization
+ - responsibility
+ - trusted
+ - initiative
 keywords: 读《关于“职业化”的思考》有感,想法,“职业”化思考,责任感,可信任感,主动性,“Geek”与“产品机器”
 ---
 职业化

@@ -3,7 +3,13 @@ layout: post
 title: "沮丧的时候和一段美好谈话"
 description: "与好友的心灵沟通"
 category: life
-tags: [soul,english,talk,chinese,happy,upset]
+tags:
+ - soul
+ - english
+ - talk
+ - chinese
+ - happy
+ - upset
 keywords: 沟通,沮丧,中文说英语,二,老友,老三
 ---
 沮丧的时候

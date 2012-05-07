@@ -4,7 +4,11 @@ layout: post
 title: "jekyll markdown rendering chinese's bug"
 description: "jekyll的markdown引擎的展现中文的bug和hack方法"
 category: tech
-tags: [bug,markdown,jekyll,syntax,]
+tags:
+ - bug
+ - markdown
+ - jekyll
+ - syntax
 keywords: jekyll,markdown引擎,中文,展现,bug
 ---
 在写上一篇日志《[鄙视“问题”乞讨者--探讨提问的艺术](http://stupig.me/blog/2012/04/12/despise-mindless-guys/)》时，偶然发现了个`jekyll`的`markdown`引擎展现中文的bug。

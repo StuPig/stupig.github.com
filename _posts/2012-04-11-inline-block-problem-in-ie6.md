@@ -3,7 +3,12 @@ layout: post
 title: "探讨ie6下inline-block问题"
 description: "探讨ie6下inline-block问题"
 category: tech
-tags: [ie6,inline-block,html,css,hack]
+tags:
+ - ie6
+ - inline-block
+ - html
+ - css
+ - hack
 keywords: ie6,inline-block,显示问题
 ---
 之前一直有论调说“ie6不支持inline-block”，

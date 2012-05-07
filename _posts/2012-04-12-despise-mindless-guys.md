@@ -3,7 +3,12 @@ layout: post
 title: "鄙视“问题”乞讨者--探讨提问的艺术"
 description: "探讨提问的艺术"
 category: work
-tags: [trouble,question,answer,ask,despise]
+tags:
+ - trouble
+ - question
+ - answer
+ - ask
+ - despise
 keywords: 问题,答案,提问,不动脑子,鄙视
 ---
 被徒弟的那么多*不动脑子*的问题烦死了，当然，最主要的是对这种碰到问题，自己连仔细思考都没有就向别人提问的*行为*烦死了。来这里宣泄下对这种行为的不满，结合我自己的亲身经历和想法，讨论下提问的艺术。为了表达我的不满之情，我将这种人称作*“问题”乞讨者*，具体表现为：

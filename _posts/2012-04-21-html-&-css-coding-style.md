@@ -3,7 +3,12 @@ layout: post
 title: "html/css coding style[hacker news上看到]"
 description: "html和css的coding style"
 category: tech
-tags: [html,html5,css,css3,coding style]
+tags:
+ - html
+ - html5
+ - css
+ - css3
+ - coding style
 keywords: 编码规范,html/css
 ---
 原文地址：[My HTML/CSS coding style](http://csswizardry.com/2012/04/my-html-css-coding-style/)
