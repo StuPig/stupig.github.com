@@ -28,7 +28,7 @@
     </url>
     <url>
         <loc>http://stupig.me/blog/2012/04/17/a-nice-talk-with-saner/</loc>
-        <lastmod>2012-05-07T18:17:28+08:00</lastmod>
+        <lastmod>2012-05-21T23:17:35+08:00</lastmod>
     </url>
     <url>
         <loc>http://stupig.me/blog/2012/04/21/html-%26-css-coding-style/</loc>
@@ -42,11 +42,17 @@
         <loc>
             http://stupig.me/blog/2012/05/21/reflect-things-happened-in-these-days-and-grow-up/
         </loc>
-        <lastmod>2012-05-21T22:43:06+08:00</lastmod>
+        <lastmod>2012-05-21T22:59:47+08:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://stupig.me/blog/2012/05/22/differences-between-primitive-wrapper-and-literal-variable-and-its-use-in-javascript/
+        </loc>
+        <lastmod>2012-05-23T00:23:40+08:00</lastmod>
     </url>
     <url>
         <loc>http://stupig.me/</loc>
-        <lastmod>2012-05-21T22:57:43+08:00</lastmod>
+        <lastmod>2012-05-23T00:23:40+08:00</lastmod>
     </url>
     <url>
         <loc>http://stupig.me/drafts/outsource-your-blog.html</loc>
