@@ -1,4 +1,4 @@
-pygments:	true
+pygments: true
 #markdown: redcloth
 # this is comfusing, u can not delete above line, or ur chinese markdown list will not render unnormal
 markdown: rdiscount
@@ -10,3 +10,11 @@ category_dir: ../blog/categories/
 tag_dir: ../blog/tags/
 tag_title_prefix: 'Tag: '
 title: StuPig
+
+url: http://www.stupig.me
+feed: /atom.xml
+author:
+    name: StuPig
+    email: shouqiang.gong@gmail.com
+    twitter: twitter.com/garyfromchina
+description: 简单生活，纯粹技术。这里见证着StuPig心智和技术的成长。

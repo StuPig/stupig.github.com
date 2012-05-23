@@ -8,3 +8,12 @@ Thumbs.db
 
 .rbenv-version
 .rvmrc
+.svn
+
+.html~
+.js~
+.css~
+.md~
+.yml~
+.txt~
+.xml~
