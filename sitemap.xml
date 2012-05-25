@@ -42,7 +42,11 @@
         <loc>
             http://stupig.me/blog/2012/05/21/reflect-things-happened-in-these-days-and-grow-up/
         </loc>
+<<<<<<< HEAD
         <lastmod>2012-05-23T20:48:23+08:00</lastmod>
+=======
+        <lastmod>2012-05-23T12:50:28+08:00</lastmod>
+>>>>>>> c6d3cd47a4b72a43224b0dacb7463214b4b23e9d
     </url>
     <url>
         <loc>
@@ -52,7 +56,11 @@
     </url>
     <url>
         <loc>http://stupig.me/</loc>
+<<<<<<< HEAD
         <lastmod>2012-05-23T20:48:23+08:00</lastmod>
+=======
+        <lastmod>2012-05-23T12:50:28+08:00</lastmod>
+>>>>>>> c6d3cd47a4b72a43224b0dacb7463214b4b23e9d
     </url>
     <url>
         <loc>http://stupig.me/drafts/outsource-your-blog.html</loc>
