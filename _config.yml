@@ -4,7 +4,7 @@ pygments: true
 markdown: rdiscount
 paginate: 5
 regeneration: true
-lsi: true
+# lsi: true
 permalink: /blog/:year/:month/:day/:title/
 category_dir: ../blog/categories/
 tag_dir: ../blog/tags/
