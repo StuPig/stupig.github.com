@@ -1,0 +1,59 @@
+<div class="highlight"><pre><span class="c">#!/bin/sh</span>
+<span class="c"># 下载所有资源</span>
+<span class="c"># --recursive \</span>
+<span class="c"># 不获取example.com之外的链接资源</span>
+<span class="c"># --domains example.com \</span>
+<span class="c"># 不覆盖已有文件(使用场景是，断点续传)</span>
+<span class="c"># --no-clobber \</span>
+<span class="c"># --html-extension \</span>
+<span class="c"># 修改文件名，让其可以再windows系统下work</span>
+<span class="c"># --restrict-file-names=windows \</span>
+<span class="c"># --no-clobber \</span>
+<span class="c"># 将链接转换为相对地址，以让本地可用</span>
+<span class="c"># --convert-links \</span>
+<span class="c"># 获取页面所有的组成元素（image css等）</span>
+<span class="c"># --page-requisites \</span>
+<span class="c"># 不去创建带host前缀的文件夹</span>
+<span class="c"># --no-host-directories \</span>
+<span class="c"># 在当前目录下下载</span>
+<span class="c"># --no-directories \</span>
+<span class="c"># 不去下载robots.txt</span>
+<span class="c"># --execute robots=off \</span>
+<span class="c"># 获取整站资源</span>
+<span class="c"># --mirror \</span>
+<span class="c"># 不去获取这些目录，黑名单方式</span>
+<span class="c"># --exclude-directories /comment/reply/,/aggregator/,/user/ \</span>
+<span class="c"># --reject &quot;aggregator*&quot; \</span>
+<span class="c"># 不去获取stupig.com/backbone之外的链接资源，白名单方式</span>
+<span class="c"># --no-parent \</span>
+<span class="c"># stupig.me</span>
+<span class="nv">ADDR</span><span class="o">=</span><span class="nv">$1</span>
+<span class="nv">SERVER</span><span class="o">=</span><span class="s2">&quot;$(echo $ADDR | sed &#39;s/\(.*:\/\/\)\([a-zA-Z0-9\.\-\_]*\)\(\/.*\)/\2/g&#39;)&quot;</span>
+wget <span class="se">\</span>
+    --recursive <span class="se">\</span>
+    --domains<span class="o">=</span><span class="nv">$SERVER</span> <span class="se">\</span>
+    --no-clobber <span class="se">\</span>
+    --html-extension <span class="se">\</span>
+    --restrict-file-names<span class="o">=</span>windows <span class="se">\</span>
+    --no-clobber <span class="se">\</span>
+    --convert-links <span class="se">\</span>
+    --page-requisites <span class="se">\</span>
+    --no-host-directories <span class="se">\</span>
+    --execute <span class="nv">robots</span><span class="o">=</span>off <span class="se">\</span>
+    --mirror <span class="se">\</span>
+    --exclude-directories /comment/reply/,/aggregator/,/user/ <span class="se">\</span>
+    --reject <span class="s2">&quot;aggregator*&quot;</span> <span class="se">\</span>
+    --no-parent <span class="se">\</span>
+    <span class="s2">&quot;$ADDR&quot;</span>
+find <span class="nv">$SERVER</span> -type f -name <span class="s2">&quot;*.css&quot;</span> -exec cat <span class="o">{}</span> <span class="se">\;</span> |
+grep -o <span class="s1">&#39;url(/[^)]*)&#39;</span> |
+sort |
+uniq |
+sed <span class="s1">&#39;s/^url(\(.*\))$/http:\/\/&#39;</span><span class="nv">$SERVER</span><span class="s1">&#39;\1/&#39;</span> |
+wget --mirror --page-requisites -i -
+<span class="k">for </span>i in <span class="sb">`</span>find <span class="nv">$SERVER</span> -type f -name <span class="s2">&quot;*.css&quot;</span><span class="sb">`</span>; <span class="k">do</span>
+<span class="k">    </span><span class="nv">PREFIX</span><span class="o">=</span><span class="s2">&quot;$(echo $i | sed &#39;s/[^\/]*//g; s/\/$//; s/\//..\\\//g&#39;)&quot;</span>
+    sed -i <span class="s1">&#39;s/url(\//url(&#39;</span><span class="nv">$PREFIX</span><span class="s1">&#39;/g&#39;</span> <span class="nv">$i</span>
+<span class="k">done</span>
+</pre>
+</div>
