@@ -64,7 +64,13 @@
     </url>
     <url>
         <loc>http://stupig.me/blog/2012/08/20/use-wget-to-dump-entire-site/</loc>
-        <lastmod>2012-08-20T06:20:33+08:00</lastmod>
+        <lastmod>2012-08-20T06:21:06+08:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://stupig.me/blog/2012/08/20/web-proxy-for-cross-domain-xmlhttprequest-calls/
+        </loc>
+        <lastmod>2012-08-20T11:19:09+08:00</lastmod>
     </url>
     <url>
         <loc>http://stupig.me/2012/2012.html</loc>
@@ -84,7 +90,7 @@
     </url>
     <url>
         <loc>http://stupig.me/</loc>
-        <lastmod>2012-08-20T06:20:33+08:00</lastmod>
+        <lastmod>2012-08-20T11:19:09+08:00</lastmod>
     </url>
     <url>
         <loc>http://stupig.me/Java/Java.html</loc>
