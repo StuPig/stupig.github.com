@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "use wget to dump entire site"
+title: "使用wget抓取整站资源的脚本"
 description: "使用wget抓取整站资源的脚本"
 category: tech
 tags:
