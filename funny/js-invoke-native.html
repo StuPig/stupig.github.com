@@ -2,8 +2,6 @@
 <!-- saved from url=(0047)http://www.gsqmt.dev.sankuai.com/testProxy.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
-    
-     
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -17,20 +15,19 @@
     <div id="test-link">test link</div>
     <iframe id="proxy" style="height:0; width:0; border:none;" src="about:blank"></iframe>
     <script type="text/javascript">
-        document.querySelector('#test-link')
-            .addEventListener('click', function() {
+        setTimeout(function() {
             var now = Date.now(), // timestamp
                 elProxy = document.querySelector('#proxy')
 
-            // native url
-            elProxy.src = "iMeituan://www.meituan.com/deal/?did=892835&cid=0&lch=shishenyy"
             setTimeout(function() {
                 if (Date.now() - now < 600) {
                     // web url
                     location.href = 'http://www.meituan.com/mobile/download/meituan/android/imeituan?from=touch'
                 }
             }, 400);
-        })
+            // native url
+            elProxy.src = "iMeituan://www.meituan.com/deal/?did=892835&cid=0&lch=shishenyy"
+        }, 300)
     </script>
 
 </body></html>
