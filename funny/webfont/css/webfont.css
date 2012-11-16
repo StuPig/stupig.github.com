@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'stupig';
+  src: url("../font/meituan-Monospaced.otf");
+  src: url("../font/meituan-Monospaced.eot?#iefix") format('embedded-opentype'), url("../font/meituan-Monospaced.woff") format('woff'), url("../font/meituan-Monospaced.ttf") format('truetype'), url("../font/meituan-Monospaced.svg#fontello") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: 'stupig';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  opacity: 0.7;
+/* Uncomment for 3D effect */
+/* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+/* fix buttons height */
+  line-height: 1em;
+/* you can be more comfortable with increased icons size */
+/* font-size: 120%; */
+}
+
+.icon-a:before { content: '\61'; } /* 'a' */
+.icon-b:before { content: '\62'; } /* 'b' */
+.icon-c:before { content: '\63'; } /* 'c' */
+.icon-d:before { content: '\64'; } /* 'd' */

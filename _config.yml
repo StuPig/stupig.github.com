@@ -12,6 +12,9 @@ tag_title_prefix: 'Tag: '
 title: StuPig
 
 url: http://www.stupig.me
+safe : true
+tracking_id : 'UA-nnnnnnnn-n'
+provider : google
 feed: /atom.xml
 author:
     name: StuPig
