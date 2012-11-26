@@ -8,8 +8,7 @@
   font-weight: normal;
   font-style: normal;
 }
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
+.the-icons i {
   font-family: 'stupig';
   font-style: normal;
   font-weight: normal;
@@ -27,8 +26,3 @@
 /* you can be more comfortable with increased icons size */
 /* font-size: 120%; */
 }
-
-.icon-a:before { content: '\61'; } /* 'a' */
-.icon-b:before { content: '\62'; } /* 'b' */
-.icon-c:before { content: '\63'; } /* 'c' */
-.icon-d:before { content: '\64'; } /* 'd' */
