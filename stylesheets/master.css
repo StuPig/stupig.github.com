@@ -2,7 +2,7 @@ body {
 
   font-family: Arial,/*'Microsoft YaHei',*/Verdana,"BitStream vera Sans",Tahoma,Helvetica,Sans-serif;
   letter-spacing: 0em;
-  background: #B0B0B0;
+  background: #789262;
   margin: 0;
   padding: 0;
   font-size: 14px;
@@ -465,7 +465,7 @@ a#gotop em.tr {
 }
 
 a#gotop em {
-  color: #EEE;
+  color: #789262;
 }
 
 a#gotop span {
@@ -485,7 +485,7 @@ a#gotop .tube {
 }
 
 a#gotop:hover em {
-  color: white;
+  color: #262;
 }
 /*
 pre::-webkit-scrollbar, .highlight::-webkit-scrollbar, .gist-highlight::-webkit-scrollbar{
