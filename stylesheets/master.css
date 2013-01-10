@@ -9,6 +9,16 @@ body {
   border-bottom-color: #999;
 }
 
+h3 {
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+h4 {
+    margin-top: 25px;
+    margin-bottom: 8px;
+}
+
 a {
   color: #583;
   font-weight: bold;
@@ -511,6 +521,7 @@ img{
   padding: 5px;
   border: #F8F8F8 0.5em solid;
   margin:10px;
+  max-width:600px;
 }
 
 #category-name{
