@@ -20,7 +20,7 @@ keywords:
 - WebPagetest
 - 持续改进
 ---
-_原文地址是：[http://calendar.perfplanet.com/2012/proactive-web-performance-optimization](http://calendar.perfplanet.com/2012/proactive-web-performance-optimization)
+_原文地址是：[http://calendar.perfplanet.com/2012/proactive-web-performance-optimization](http://calendar.perfplanet.com/2012/proactive-web-performance-optimization)_
 
 _文章作者[`Marcel Duran`](http://twitter.com/marcelduran)，也是YSlow的作者，twitter前端工程师，之前是Yahoo性能团队leader_
 
