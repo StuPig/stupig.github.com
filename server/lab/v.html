@@ -1,0 +1,469 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>v.html</title>
+</head>
+<body>
+
+<style type="text/css">
+/*---------------*\
+    base
+\*---------------*/
+.v-welcome *, .v-recommend *, .v-tips *, .v-list *{
+    margin: 0;
+    padding: 0;
+}
+/*---------------*\
+    $welcome
+\*---------------*/
+.v-welcome {
+    text-align: center;
+}
+.v-welcome span{
+    background-color: #FFDFBF;
+    line-height: 12px;
+}
+.v-welcome img{
+    vertical-align: middle;
+}
+/*---------------*\
+    $recommend
+\*---------------*/
+.v-recommend {
+    text-align: center;
+}
+.v-recommend p{
+    font-weight: bold;
+    color: #FFDFBF;
+    background-color: #482C1B;
+}
+.v-recommend-container {
+    background-image: url(http://www24.tx8cdn.com/photo/flowerhuahua03/201232419114521.jpg) no-repeat;
+}
+.v-recommend-container td{
+    vertical-align: middle;
+    width: 210px;
+    height: 260px;
+    padding-left: 35px;
+    padding-top: 5px;
+}
+.v-recommend-container a, .v-tips .v-show a {
+    display: block;
+}
+.v-recommend-container a:hover, .v-tips .v-show a:hover {
+    -webkit-animation: cssAnimation 1s 1 ease;
+    -moz-animation: cssAnimation 1s 1 ease;
+    -o-animation: cssAnimation 1s 1 ease;
+}
+@-webkit-keyframes cssAnimation {
+    from { -webkit-transform: rotate(0deg) scale(1) skew(0deg) translate(0px); }
+    to { -webkit-transform: rotate(0deg) scale(1.5) skew(0deg) translate(0px); }
+}
+@-moz-keyframes cssAnimation {
+    from { -moz-transform: rotate(0deg) scale(1) skew(0deg) translate(0px); }
+    to { -moz-transform: rotate(0deg) scale(1.5) skew(0deg) translate(0px); }
+}
+@-o-keyframes cssAnimation {
+    from { -o-transform: rotate(0deg) scale(1) skew(0deg) translate(0px); }
+    to { -o-transform: rotate(0deg) scale(1.5) skew(0deg) translate(0px); }
+}
+/*---------------*\
+    $tips
+\*---------------*/
+.v-tips {
+    height: 535px;
+    width: 750px;
+    position: relative;
+}
+.v-tips .v-top {
+    background: url(http://www24.tx8cdn.com/photo/flowerhuahua03/%E6%97%B6%E8%A3%85%E5%85%94%E5%85%94_01.gif) no-repeat;
+    width: 750px;
+    height: 30px;
+}
+.v-tips .v-main {
+    background: url(http://www24.tx8cdn.com/photo/flowerhuahua03/%E6%97%B6%E8%A3%85%E5%85%94%E5%85%94_05.gif) no-repeat top right;
+    width: 750px;
+    height: 495px;
+}
+.v-tips-detail {
+    text-shadow: 3px 3px 3px #000;
+    font-size: 12px;
+    width: 570px;
+    height: 246px;
+    position: absolute;
+    background: url(http://www24.tx8cdn.com/photo/flowerhuahua03/%E6%97%B6%E8%A3%85%E5%85%94%E5%85%94_04.gif) no-repeat;
+    right: 26px;
+}
+.v-tips-detail a {
+    display: block;
+}
+.v-tips-detail em, .v-tips-detail i {
+    color: #333;
+}
+.v-tips-detail li{
+    list-style-type: none;
+}
+.v-tips .v-foot {
+    background: url(http://www24.tx8cdn.com/photo/flowerhuahua03/%E6%97%B6%E8%A3%85%E5%85%94%E5%85%94_11.gif) no-repeat;
+    width: 735px;
+    height: 25px;
+    position: absolute;
+    top: 509px;
+}
+/*
+.v-tips .v-left, .v-tips .v-right, .v-tips .v-show {
+    position: absolute;
+}
+*/
+.v-tips .v-show {
+    position: absolute;
+    top: 276px;
+    left: 288px;
+}
+.v-rabbit-head {
+    background: url(http://www24.tx8cdn.com/photo/flowerhuahua03/%E6%97%B6%E8%A3%85%E5%85%94%E5%85%94_03.gif) no-repeat top left;
+    height: 246px;
+    width: 152px;
+    position: absolute;
+    left: 2px;
+}
+.v-rabbit-body {
+    background: url(http://www24.tx8cdn.com/photo/flowerhuahua03/201232419449794.gif) no-repeat;
+    width: 288px;
+    height: 233px;
+    position: absolute;
+    top: 276px;
+}
+.v-show .v-head {
+    background: url(http://www24.tx8cdn.com/photo/flowerhuahua03/%E6%97%B6%E8%A3%85%E5%85%94%E5%85%94_07.gif) no-repeat;
+    width: 447px;
+    height: 30px;
+    position: absolute;
+}
+.v-show ul {
+    position: absolute;
+    top: 30px;
+    width: 448px;
+}
+.v-show li {
+    float: left;
+    list-style-type: none;
+    _display: inline;
+    margin: ;
+}
+.v-show .v-left {
+    background: url(http://www24.tx8cdn.com/photo/flowerhuahua03/时装兔兔_08.gif) no-repeat;
+    width: 200px;
+    height: 203px;
+}
+.v-show .v-right {
+    background: url(http://www24.tx8cdn.com/photo/flowerhuahua03/时装兔兔_10.gif) no-repeat;
+    width: 205px;
+    height: 203px;
+}
+.v-show .v-middle {
+    background: url(http://www24.tx8cdn.com/photo/flowerhuahua03/%E6%97%B6%E8%A3%85%E5%85%94%E5%85%94_09.gif) no-repeat;
+    width: 42px;
+    height: 203px;
+}
+/*---------------*\
+    $list
+\*---------------*/
+.v-list {
+    border-spacing: 0;
+    background-color: #333;
+}
+.v-list p{
+    background-color: #fff;
+    font-size: 12px;
+    height: 32px;
+}
+.v-list a {
+    display: block;
+    opacity: 0.7;
+    -moz-opacity: 0.7;
+    filter:alpha(opacity=7);
+    text-decoration: none;
+    color: #787878;
+}
+.v-list a:hover{
+    color: #333;
+    font-weight: bold;
+    opacity: 1;
+    -moz-opacity: 1;
+    filter:alpha(opacity=1);
+    -webkit-animation: cssAnimation 1s 1 ease;
+    -moz-animation: cssAnimation 1s 1 ease;
+    -o-animation: cssAnimation 1s 1 ease;
+}
+@-webkit-keyframes cssAnimation {
+    from { -webkit-transform: rotate(0deg) scale(1) skew(0deg) translate(0px); }
+    to { -webkit-transform: rotate(0deg) scale(1.5) skew(0deg) translate(0px); }
+}
+@-moz-keyframes cssAnimation {
+    from { -moz-transform: rotate(0deg) scale(1) skew(0deg) translate(0px); }
+    to { -moz-transform: rotate(0deg) scale(1.5) skew(0deg) translate(0px); }
+}
+@-o-keyframes cssAnimation {
+    from { -o-transform: rotate(0deg) scale(1) skew(0deg) translate(0px); }
+    to { -o-transform: rotate(0deg) scale(1.5) skew(0deg) translate(0px); }
+}
+.v-small {
+    height: 200px;
+    width: 160px;
+}
+.v-middle {
+    height: 200px;
+    width: 250px;
+}
+</style>
+<div class="v-welcome">
+    <span>
+        <img src="http://img01.taobaocdn.com/imgextra/i1/290267139/T2HbtXXa0OXXXXXXXX_!!290267139.png" alt="iamv欢迎您，亲爱滴上帝" title="iamv欢迎您，亲爱滴上帝">
+        <b>
+        </b>
+    </span>
+</div><!-- /v-welcome -->
+<div class="v-recommend">
+    <p>-------------------------------------------店主推荐----------------------------------------------</p>
+    <div class="v-recommend-container">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="v-left">
+                        <a href="http://item.taobao.com/item.htm?id=14661505015" title="Hello!V~mind bridge2012夏款荷叶边短袖泡泡袖T恤">
+                            <img width="180" height="200" src="http://img04.taobaocdn.com/imgextra/i4/290267139/T2nTNlXetNXXXXXXXX_!!290267139.jpg" alt="Hello!V~mind bridge2012夏款荷叶边短袖泡泡袖T恤">
+                        </a>
+                    </td>
+                    <td class="v-middle">
+                        <a href="http://item.taobao.com/item.htm?id=17278516203" title="Hello!V~Mind bridge2012年新款拼接雪纺撞色衬衣">
+                            <img width="180" height="200" src="http://img03.taobaocdn.com/imgextra/i3/290267139/T2.niJXahXXXXXXXXX_!!290267139.jpg" alt="Hello!V~Mind bridge2012年新款拼接雪纺撞色衬衣">
+                        </a>
+                    </td>
+                    <td class="v-right">
+                        <a href="http://item.taobao.com/item.htm?id=17342320490" title="Hello!V~MIND BRIDGE2012夏新款圆点海报款短裤">
+                            <img width="180" height="200" src="http://img03.taobaocdn.com/imgextra/i3/290267139/T2QnVsXXXNXXXXXXXX_!!290267139.jpg" alt="Hello!V~MIND BRIDGE2012夏新款圆点海报款短裤">
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div><!-- /v-recommend -->
+<div class="v-tips">
+    <div class="v-top">
+
+    </div>
+    <div class="v-main">
+        <div class="v-rabbit-head">
+
+        </div>
+        <div class="v-tips-detail">
+            <a>
+                <h3>SPECIAL NOTICE  |  <em>公告栏</em></h3>
+                <ul>
+                    <li>
+                        <p><b>关于宝贝</b>--小店宝贝大部分为<i>原单正品</i>及<i>专柜尾货</i>，请亲们放心选购。原单的宝贝吊牌、领标等不一定全的，也可能出现换标情况，不代表它就不是正品，亲们在选购之前可以到各地专柜试穿好衣服款式、颜色、尺码，再来小店选购，拍下后请确保收货地址以及电话完全正确，V会尽快发货。</p>
+                    </li>
+                    <li>
+                        <p><b>关于优惠</b>--单次购女装2件<i>包邮</i>（不包括标题“特价”的宝贝）。</p>
+                    </li>
+                    <li>
+                        <p><b>关于快递</b>--默认<i>圆通快递</i>，每天下午5点左右发货。</p>
+                    </li>
+                    <li>
+                        <p><b>关于售后</b>--店铺尚未加入7天无理由退换货，收到宝贝后，如有质量问题请尽快联系V处理，V会积极做好售后工作，退换货请于收货之日起<i>7日</i>内寄回，中差评不能帮买家解决任何问题。</p>
+                    </li>
+                    <li>
+                        <p><b>关于会员</b>--累计消费满800元后，再次购物享受<i>9.5折</i>；累计消费满1800元后，再次购物享受9折（不包含标题“特价”的宝贝）</p>
+                    </li>
+                    <li>
+
+                    </li>
+                </ul>
+            </a>
+        </div>
+        <div class="v-rabbit-body">
+
+        </div>
+        <div class="v-show">
+            <div class="v-head">
+
+            </div>
+            <ul>
+                <li class="v-left">
+                    <a href="http://item.taobao.com/item.htm?id=17229776891" title="Hello!V~Five Plus 5+2012春夏款款梭织碎花连体裤">
+                        <img height="189" width="196" src="http://img02.taobaocdn.com/imgextra/i2/290267139/T27ytiXgJNXXXXXXXX_!!290267139.jpg" alt="Hello!V~Five Plus 5+2012春夏款款梭织碎花连体裤">
+                    </a>
+                </li>
+                <li class="v-middle">
+
+                </li>
+                <li class="v-right">
+                    <a href="http://item.taobao.com/item.htm?id=14606830412" title="Hello!V~欧时力专柜2012春夏海报款长款连衣裙">
+                        <img width="145" height="199" src="http://img02.taobaocdn.com/imgextra/i2/290267139/T2CbpsXexNXXXXXXXX_!!290267139.jpg" alt="Hello!V~欧时力专柜2012春夏海报款长款连衣裙">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="v-foot">
+
+    </div>
+    <!-- <table border="0" cellspacing="0" cellpadding="0" width="750" height="535">
+        <tbody>
+            <tr>
+                <td colspan="7">
+                    <img alt="" src="http://www24.tx8cdn.com/photo/flowerhuahua03/时装兔兔_01.gif"
+                    width="750" height="30">
+                </td>
+            </tr>
+            <tr>
+                <td width="2" colspan="1">
+                    <img alt="" src="http://www24.tx8cdn.com/photo/flowerhuahua03/时装兔兔_02.gif"
+                    width="2" height="246">
+                </td>
+                <td width="152" colspan="1">
+                    <img alt="" src="http://www24.tx8cdn.com/photo/flowerhuahua03/时装兔兔_03.gif"
+                    width="152" height="246">
+                </td>
+                <td  colspan="4" height="246" background="http://www24.tx8cdn.com/photo/flowerhuahua03/时装兔兔_04.gif">
+                    <div class="v-tips-detail">
+                        <a>
+                            <h3>SPECIAL NOTICE  |  <em>公告栏</em></h3>
+                            <ul>
+                                <li>
+                                    <p><b>关于宝贝</b>--小店宝贝大部分为<i>原单正品</i>及<i>专柜尾货</i>，请亲们放心选购。原单的宝贝吊牌、领标等不一定全的，也可能出现换标情况，不代表它就不是正品，亲们在选购之前可以到各地专柜试穿好衣服款式、颜色、尺码，再来小店选购，拍下后请确保收货地址以及电话完全正确，V会尽快发货。</p>
+                                </li>
+                                <li>
+                                    <p><b>关于优惠</b>--单次购女装2件<i>包邮</i>（不包括标题“特价”的宝贝）。</p>
+                                </li>
+                                <li>
+                                    <p><b>关于快递</b>--默认<i>圆通快递</i>，每天下午5点左右发货。</p>
+                                </li>
+                                <li>
+                                    <p><b>关于售后</b>--店铺尚未加入7天无理由退换货，收到宝贝后，如有质量问题请尽快联系V处理，V会积极做好售后工作，退换货请于收货之日起<i>7日</i>内寄回，中差评不能帮买家解决任何问题。</p>
+                                </li>
+                                <li>
+                                    <p><b>关于会员</b>--累计消费满800元后，再次购物享受<i>9.5折</i>；累计消费满1800元后，再次购物享受9折（不包含标题“特价”的宝贝）</p>
+                                </li>
+                                <li>
+
+                                </li>
+                            </ul>
+                        </a>
+                    </div>
+                </td>
+                <td rowspan="4" colspan="1">
+                    <img alt="" src="http://www24.tx8cdn.com/photo/flowerhuahua03/时装兔兔_05.gif"
+                    width="15" height="504">
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2" colspan="3">
+                    <div>
+                        <img src="http://www24.tx8cdn.com/photo/flowerhuahua03/201232419449794.gif"
+                        width="288" height="233">
+                    </div>
+                </td>
+                <td colspan="3">
+                    <img alt="" src="http://www24.tx8cdn.com/photo/flowerhuahua03/时装兔兔_07.gif"
+                    width="447" height="30">
+                </td>
+            </tr>
+            <tr>
+                <td height="200" background="http://www24.tx8cdn.com/photo/flowerhuahua03/时装兔兔_08.gif"
+                width="200">
+                    <div align="center">
+                        <a href="http://item.taobao.com/item.htm?id=17229776891" target="_blank"
+                        data-spm-anchor-id="1103SQRu.1-3GuaA.3-6uNIPG">
+                            <img alt="" src="http://img02.taobaocdn.com/imgextra/i2/290267139/T27ytiXgJNXXXXXXXX_!!290267139.jpg"
+                            width="196" height="189">
+                        </a>
+                    </div>
+                </td>
+                <td>
+                    <img alt="" src="http://www24.tx8cdn.com/photo/flowerhuahua03/时装兔兔_09.gif"
+                    width="42" height="203">
+                </td>
+                <td height="200" background="http://www24.tx8cdn.com/photo/flowerhuahua03/时装兔兔_10.gif"
+                width="200">
+                    <div align="center">
+                        <a href="http://item.taobao.com/item.htm?id=14606830412" target="_blank"
+                        data-spm-anchor-id="1103SQRu.1-3GuaA.3-6uNIPG">
+                            <img style="width:147px;height:195px;" alt="" src="http://img02.taobaocdn.com/imgextra/i2/290267139/T2CbpsXexNXXXXXXXX_!!290267139.jpg"
+                            width="145" height="199">
+                        </a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                    <img alt="" src="http://www24.tx8cdn.com/photo/flowerhuahua03/时装兔兔_11.gif"
+                    width="735" height="25">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div> --><!-- /v-tips -->
+<table class="v-list">
+    <tbody>
+        <tr>
+            <td class="v-small">
+                <a href="http://item.taobao.com/item.htm?id=15451195526" title="Mind Bridge 2012年夏季新款蕾丝肩连衣裙">
+                    <img width="160" height="200" src="http://img02.taobaocdn.com/imgextra/i2/290267139/T2VpiJXjlaXXXXXXXX_!!290267139.jpg" alt="Mind Bridge 2012年夏季新款蕾丝肩连衣裙">
+                    <p>Mind Bridge 2012年夏季新款蕾丝肩连衣裙</p>
+                </a>
+            </td>
+            <td class="v-small">
+                <a href="http://item.taobao.com/item.htm?id=14635089420" title="Mind Bridge2012夏季新款美女雪纺拼接T恤">
+                    <img width="160" height="200" src="http://img03.taobaocdn.com/imgextra/i3/290267139/T2TFeJXjXaXXXXXXXX_!!290267139.jpg" alt="Mind Bridge2012夏季新款美女雪纺拼接T恤">
+                    <p>Mind Bridge2012夏季新款美女雪纺拼接T恤</p>
+                </a>
+            </td>
+            <td class="v-small">
+                <a href="http://item.taobao.com/item.htm?id=14667090431" title="百家好2012夏季新款宽松版百搭舒适短袖T恤">
+                    <img width="160" height="200" src="http://img01.taobaocdn.com/imgextra/i1/290267139/T2VbViXaRNXXXXXXXX_!!290267139.jpg" alt="百家好2012夏季新款宽松版百搭舒适短袖T恤">
+                    <p>百家好2012夏季新款宽松版百搭舒适短袖T恤</p>
+                </a>
+            </td>
+            <td class="v-middle">
+                <a href="http://item.taobao.com/item.htm?id=15506867774&" title="大牌CK~Calvin Klein欧美原单条纹褶皱不规则立体纯棉T~138.00包邮">
+                    <img width="250" height="200" src="http://img02.taobaocdn.com/imgextra/i2/290267139/T2vPdXXkBNXXXXXXXX_!!290267139.jpg" alt="大牌CK~Calvin Klein欧美原单条纹褶皱不规则立体纯棉T~138.00包邮">
+                    <p>大牌CK~Calvin Klein欧美原单条纹褶皱不规则立体纯棉T~138.00包邮</p>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td class="v-small">
+                <a href="http://item.taobao.com/item.htm?id=17279132755&" title="百家好2012最新夏款韩版超美雪纺清凉衬衫">
+                    <img width="160" height="200" src="http://img02.taobaocdn.com/imgextra/i2/290267139/T2DDqJXcNXXXXXXXXX_!!290267139.jpg" alt="百家好2012最新夏款韩版超美雪纺清凉衬衫">
+                    <p>百家好2012最新夏款韩版超美雪纺清凉衬衫</p>
+                </a>
+            </td>
+            <td class="v-small">
+                <a href="http://item.taobao.com/item.htm?id=14661145470" title="MIND BRIDGE2012夏款宽松圆领露肩T恤">
+                    <img width="160" height="200" src="http://img02.taobaocdn.com/imgextra/i2/290267139/T26nmJXXhXXXXXXXXX_!!290267139.jpg" alt="MIND BRIDGE2012夏款宽松圆领露肩T恤">
+                    <p>MIND BRIDGE2012夏款宽松圆领露肩T恤</p>
+                </a>
+            </td>
+            <td class="v-small">
+                <a href="http://item.taobao.com/item.htm?id=14656998629&" title="Mind Bridge2012睫毛蕾丝淑女气质连衣裙">
+                    <img width="160" height="200" src="http://img04.taobaocdn.com/imgextra/i4/290267139/T2xTeJXnhXXXXXXXXX_!!290267139.jpg" alt="Mind Bridge2012睫毛蕾丝淑女气质连衣裙">
+                    <p>Mind Bridge2012睫毛蕾丝淑女气质连衣裙</p>
+                </a>
+            </td>
+            <td class="v-middle">
+                <a href="http://item.taobao.com/item.htm?id=17226096734" title="百家好2012年海报夏款韩版破洞牛仔短裤热裤">
+                    <img height="200" width="250" src="http://img01.taobaocdn.com/imgextra/i1/290267139/T2gXiJXnNaXXXXXXXX_!!290267139.jpg" alt="百家好2012年海报夏款韩版破洞牛仔短裤热裤">
+                    <p>百家好2012年海报夏款韩版破洞牛仔短裤热裤</p>
+                </a>
+            </td>
+        </tr>
+    </tbody>
+</table><!-- /v-list -->
+
+
+</body>
+</html>

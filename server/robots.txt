@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /css/
+Disallow: /js/
+Disallow: /works/
+
+Sitemap: http://www.stupig.me/sitemap.xml

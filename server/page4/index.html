@@ -1,0 +1,808 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="" />
+    <title>
+        
+            StuPig
+        
+    </title>
+    <link rel="stylesheet" href="/stylesheets/master.css" type="text/css" media="screen" charset="utf-8"/>
+    <link rel="stylesheet" href="/stylesheets/syntax.css" type="text/css" media="screen" charset="utf-8"/>
+    <script src="/javascripts/jquery.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/javascripts/jquery.github.js" type="text/javascript" charset="utf-8"></script>
+    <link rel='alternate' type='application/rss+xml' href='atom.xml' />
+  </head>
+  <body>
+    <div id='wrapper'>
+      <div id='header' style='background: #F8F8F8;'>
+        <h1><a href='/'>StuPig</a></h1>
+        <div id='menu'>
+          <ul>
+            <li><a href='/index.html' id='home_link' title='Home'>Home</a></li>
+            <li><a href='http://github.com/stupig' target='_blank' title='GitHub' rel='me' id='github_link'>GitHub</a></li>
+            <li><a href='https://twitter.com/#!/GaryFromChina' title='Twitter' target='_blank' rel='me' id='twitter_link'>twitter</a></li>
+            <li><a href='http://stackoverflow.com/users/1251340/stupig' title='stackoverflow' target='_blank' rel='me' id='stackoverflow_link'>stackoverflow</a></li>
+            <li><a href='/lab' id='lab_link' title='Lab'>Lab</a></li>
+            <li><a href='/share' id='share_link' title='Share'>Share</a></li>
+<!--             <li><a href='http://about.me/stupig' title='about.me' target='_blank' rel='me' id='aboutme_link'>about.me</a></li>
+ -->          </ul>
+        </div>
+      </div>
+      <div id='navigater'>
+      </div>
+      <div id='content'>
+        <div class='home_box' id='home_left' style='margin-left:0.3em'>
+
+  <div class="posts">
+    <span class='date'>12 Apr 2012</span>
+    <h1 id='title'><a href="/blog/2012/04/12/despise-mindless-guys/" title="鄙视“问题”乞讨者--探讨提问的艺术">鄙视“问题”乞讨者--探讨提问的艺术</a></h1>
+    <div class="body" style='background: #FFF;'>
+      <div id="post_content_overflow"><p>被徒弟的那么多<em>不动脑子</em>的问题烦死了，当然，最主要的是对这种碰到问题，自己连仔细思考都没有就向别人提问的<em>行为</em>烦死了。来这里宣泄下对这种行为的不满，结合我自己的亲身经历和想法，讨论下提问的艺术。为了表达我的不满之情，我将这种人称作<em>“问题”乞讨者</em>，具体表现为：</p>
+
+<ol>
+<li>自己都不能清楚详细的描述问题</li>
+<li>对于问题，没有经过自己的尝试</li>
+<li>只知道问题现象，没去考虑问题可能发生的原因</li>
+<li>提问时喜欢以“为什么……了”开头，</li>
+<li>提问时喜欢以“怎么才能……”开头</li>
+<li>没有尝试去网上搜索类似问题</li>
+<li>出现问题，首先不看自身问题，却先找其他相关人员问罪</li>
+<li>提出的问题是一个泛泛的现象，而不是准确的技术知识点</li>
+</ol>
+
+
+<p>暂时就想到了这么多，欢迎补充。对于第4、5条，相关项目经理或者“高层”们请勿对号入座，如果不巧言中，好吧，你就是这B样。</p>
+
+<p>“三人行，必有我师”、“不耻下问”，等一直教导我们的固然不错，但是在提问之前，是应该要经过自己的过滤的。之前的公司曾经专门针对“如何提问”做过讨论，公司大牛们等一直希望被提问的问题是<em>有含金量</em>的。</p>
+
+<p>大家都是从小白而来，你不可能一开始就问出很高深的问题，而这里说的“含金量”，是指经过你的过滤，加入了你自己对问题的思考，在你曾经尝试通过搜索类似问题、写demo单独测试等步骤后，仍然未得出准确结论，或者准确解决办法的问题。已经去除了糟粕的，纯净的技术问题（就技术而言）。这样的问题，才可以称得上是一个有“含金量”的问题</p>
+
+<p>很感谢我入行时的师傅@KCZ，他估计当时也是受够了我无休无止的SB问题的折磨，于是在第N次我继续向他提出SB问题时，他跟我说，让我以后再提问时，先做好一下工作:</p>
+
+<ol>
+<li>仔细分析问题，能详细精准的把表象定位成一个技术问题</li>
+<li>经由网络搜索过关于该问题的答案</li>
+<li>将这个问题单独抽离出来，写过demo，做过测试</li>
+<li>与他人协作时，先确保自身没有问题，再去找别人的茬</li>
+</ol>
+
+
+<p>以上工作做完，还没搞定，那么在提问时，要做到：</p>
+
+<ol>
+<li>清楚简练的给出上下文，准确表述出问题</li>
+<li>告诉我你之前已经做过了那些工作</li>
+<li>告诉我你对这个问题的看法，（问题的可能原因，以及哪写原因是直接排除在外的）</li>
+</ol>
+
+
+<p>其实，如果以上几步都做好了，我相信你再提出的问题，就是一个很有“含金量”的问题，被提问者也会很乐于回答。这样做还有以下三个好处：</p>
+
+<ol>
+<li>锻炼了你的表达能力</li>
+<li>增强了你对于这个问题的认识，你会比其他人记得更深刻</li>
+<li>提高了自我解决问题的能力，消除对别人的依赖心理</li>
+</ol>
+
+
+<p>以上是一些个人的看法和经验教训，并在结尾附上相关参考文章。
+眼看一个小时已经过去，也不再心烦了，保持好心态，继续干活……</p>
+
+<p>【参考阅读】</p>
+
+<p><a href="http://www.beiww.com/doc/oss/smart-questions.html">How To Ask Questions The Smart Way(中文版)</a></p>
+
+<p><a href="http://stackoverflow.com/faq">stackoverflow上关于如何提问的faq</a></p>
+</div>
+      <div class='quick-read-more'><a href='/blog/2012/04/12/despise-mindless-guys/'>阅读全文...</a></div>
+    </div><br />
+    </div>
+    
+  <div class="posts">
+    <span class='date'>11 Apr 2012</span>
+    <h1 id='title'><a href="/blog/2012/04/11/inline-block-problem-in-ie6/" title="探讨ie6下inline-block问题">探讨ie6下inline-block问题</a></h1>
+    <div class="body" style='background: #FFF;'>
+      <div id="post_content_overflow"><p>之前一直有论调说“ie6不支持inline-block”，</p>
+
+<p>对于这种类似的论调，技术人员还是应该保持一份求真务实的态度，
+不可惘信，我一直推荐的也是我尽量一直在践行的都是去写个简单的demo，
+去除依赖，单独的去测一个具体功能，这是种很笨，却是最有效的方式
+尤其是对于像我这种经验欠缺的菜鸟来说。
+要知道，前端本身就是一个非常经验的工作，碰到问题，与其去纠结，
+倒不如写个demo验证猜想来的实在。</p>
+
+<blockquote><p>手比头高，光说不练假把势</p></blockquote>
+
+<p>ie6并非不支持，只是支持的不完全，换言之，
+支持的有问题。
+之前做项目碰到过ie6下inline-block的问题，记得当时的结论是，
+尽量用div去实现inline-block，而不要用span，
+今天有求证了当时跟我一起做项目的兄弟，发现其实是当时我是“在span标签里（span设置成inline-block）套div”，产生的问题，倒非ie6的inline-block问题，
+没办法，哥很笨，记得当时被同事嘲笑的体无完肤</p>
+
+<p>今天徒弟问我ie6下的inline-block问题，于是我果断测试了一下：</p>
+
+<div class="highlight"><pre><code class="html"><span class="lineno"> 1</span> <span class="nt">&lt;style&gt;</span>
+<span class="lineno"> 2</span> <span class="nc">.d</span> <span class="p">{</span>
+<span class="lineno"> 3</span>     <span class="k">height</span><span class="o">:</span> <span class="m">50px</span><span class="p">;</span>
+<span class="lineno"> 4</span>     <span class="k">width</span><span class="o">:</span> <span class="m">50px</span><span class="p">;</span>
+<span class="lineno"> 5</span>     <span class="k">border</span><span class="o">:</span> <span class="m">1px</span> <span class="k">solid</span> <span class="nb">red</span><span class="p">;</span>
+<span class="lineno"> 6</span>     <span class="c">/* div 需要设置成display:inline 同时设置zoom:1来出发haslayout来模拟inline-block */</span>
+<span class="lineno"> 7</span>     <span class="o">*</span><span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="p">;</span>
+<span class="lineno"> 8</span>     <span class="n">zoom</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
+<span class="lineno"> 9</span> <span class="p">}</span>
+<span class="lineno">10</span> <span class="nc">.s</span> <span class="p">{</span>
+<span class="lineno">11</span>     <span class="c">/* ie6 天然支持span的inline-block */</span>
+<span class="lineno">12</span>     <span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="o">-</span><span class="k">block</span><span class="p">;</span>
+<span class="lineno">13</span>     <span class="k">height</span><span class="o">:</span> <span class="m">50px</span><span class="p">;</span>
+<span class="lineno">14</span>     <span class="k">width</span><span class="o">:</span> <span class="m">50px</span><span class="p">;</span>
+<span class="lineno">15</span>     <span class="k">border</span><span class="o">:</span> <span class="m">1px</span> <span class="k">solid</span> <span class="nb">red</span><span class="p">;</span>
+<span class="lineno">16</span> <span class="p">}</span>
+<span class="lineno">17</span> <span class="nt">&lt;/style&gt;</span>
+<span class="lineno">18</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;d&quot;</span><span class="nt">&gt;</span>div0<span class="nt">&lt;/div&gt;</span>
+<span class="lineno">19</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;d&quot;</span><span class="nt">&gt;</span>div1<span class="nt">&lt;/div&gt;</span>
+<span class="lineno">20</span> <span class="nt">&lt;hr</span> <span class="nt">&gt;</span>
+<span class="lineno">21</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;s&quot;</span><span class="nt">&gt;</span>span0<span class="nt">&lt;/span&gt;</span>
+<span class="lineno">22</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;s&quot;</span><span class="nt">&gt;</span>span1<span class="nt">&lt;/span&gt;</span>
+</code></pre>
+</div>
+
+
+<p>关于此，<a href="http://w3help.org/zh-cn/">W3Help</a>中如此描述:</p>
+
+<blockquote><p>IE6 IE7 IE8(Q) 中，'display:inline-block' 特性值含义与 CSS 2.1 规范描述不同。对照 MSDN 描述以及 CSS 1、CSS 2 历史规范，'display:inline-block' 最初由 IE 5.5 开始支持，直至 CSS 2.1 规范中才加入了此特性值。因此在这些古老版本 IE 浏览器中，'display:inline-block' 特性值设置不能将块元素转变为行内块，他的作用为触发 IE 的 hasLayout 特性，使元素拥有布局特性。
+如果将他用在行内元素上，可以使行内元素拥有布局，以便使宽高等无法作用在行内元素上的样式特性生效。对于块元素，他仅触发了布局特性，还要将块元素的 'display' 特性值设定为 'inline' 才可以获得类似规范描述的 'inline-block' 布局效果。</p></blockquote>
+
+<p>至于需要用到inline-block时，是采用span还是div模拟，
+个人更倾向于根据实际情况，或者说是根据语义性。
+比方说，该节点内包含的节点为块级元素，则采用div模拟(不要重蹈我当时的覆辙).
+如果只是文字等行内元素，
+则采用行内标签设置inline-block</p>
+</div>
+      <div class='quick-read-more'><a href='/blog/2012/04/11/inline-block-problem-in-ie6/'>阅读全文...</a></div>
+    </div><br />
+    </div>
+    
+  <div class="posts">
+    <span class='date'>10 Apr 2012</span>
+    <h1 id='title'><a href="/blog/2012/04/10/all-things-bright-and-beautiful/" title="all things bright and beautiful">all things bright and beautiful</a></h1>
+    <div class="body" style='background: #FFF;'>
+      <div id="post_content_overflow"><p><em>前言</em></p>
+
+<p>人的一切痛苦，本质上都是对自己的无能的愤怒。
+——王小波</p>
+
+<p>是谁的青春期，如此的漫长。或许有委屈，或许还迷茫
+——彭坦《少年故事》</p>
+
+<hr />
+
+<p>总是学不会去平静</p>
+
+<p>心胸狭窄</p>
+
+<p>似乎任何小事都能搅动半池波澜</p>
+
+<p>自甘堕落</p>
+
+<p>却又争强好胜</p>
+
+<p>好累</p>
+
+<p>不愿去承认差距</p>
+
+<p>又在现实面前低头</p>
+
+<p>抑郁</p>
+
+<p>大学之前，经常的去阅读</p>
+
+<p>修身养性而无忧无虑</p>
+
+<p>大学之后</p>
+
+<p>外界的浮躁侵蚀的越来越多</p>
+
+<p>内心的倾听却越来越少</p>
+
+<p>迷失了心智</p>
+
+<p>自己真的是要学着去放下</p>
+
+<p>倾听自己的内心</p>
+
+<p>每天跟自己交流吧</p>
+
+<p>接受不可以改变的</p>
+
+<p>改变可以改变的</p>
+
+<p>告诉自己</p>
+
+<p>all things bright and beautiful</p>
+</div>
+      <div class='quick-read-more'><a href='/blog/2012/04/10/all-things-bright-and-beautiful/'>阅读全文...</a></div>
+    </div><br />
+    </div>
+    
+  <div class="posts">
+    <span class='date'>09 Apr 2012</span>
+    <h1 id='title'><a href="/blog/2012/04/09/%E5%BC%95%E6%B8%A1/" title="引渡">引渡</a></h1>
+    <div class="body" style='background: #FFF;'>
+      <div id="post_content_overflow"><p><strong>哀其不幸，怒其不争</strong></p>
+
+<p>有的时候恨别人不争的很大原因，或许更是恨自己不争吧
+要以平和的心态看事、待人，<a href="http://lifesinger.wordpress.com">玉伯</a>的箴言警句对我也同样适用啊：</p>
+
+<blockquote><p>“谦卑、宁静、关爱”</p></blockquote>
+
+<p>我又何尝不像不争气他一样，
+懒惰，
+闪烁其词，
+唯唯诺诺，
+甚至还没有他的那份平和的对待外界压力的心态</p>
+
+<p>只不过，
+他有一个看不开的“师傅”给他训诫
+而作为他的“师傅”的我，
+现在却没人替我引渡</p>
+
+<p>--StuPig</p>
+</div>
+      <div class='quick-read-more'><a href='/blog/2012/04/09/%E5%BC%95%E6%B8%A1/'>阅读全文...</a></div>
+    </div><br />
+    </div>
+    
+  <div class="posts">
+    <span class='date'>08 Apr 2012</span>
+    <h1 id='title'><a href="/blog/2012/04/08/%E4%B8%8E%E5%AE%B6%E4%BA%BA%E8%B0%88%E8%AF%9D%E5%90%8E/" title="与家人谈话后">与家人谈话后</a></h1>
+    <div class="body" style='background: #FFF;'>
+      <div id="post_content_overflow"><p><strong>好久</strong>没有跟家里人打电话了，呃，不知道又有多少现代人在想到叙述下亲情相关的内容的时候，会首先冒出这一句。反正我是到今天刚好有三个星期了，之所以“好久”，或许还因为中间还跨了个清明节的缘故吧。</p>
+
+<p>正常是每周末都会跟家里在网上聊一次天，开始是我主动聊，毕竟一个人在外，没社么朋友，有没什么消遣，却有许多抱怨和牢骚，总想找个地方倾诉。那时，一到周六，甚至等不到周六，我就会跟家里联系，发发牢骚，听听嘱咐，挂下电话，浑身轻松，充满斗志。后来渐渐的，开始不太想跟家里打电话，因为放下电话后的我，是没怎么有心情再去打游戏，看电影，碌碌无为，却身心疲惫的过完整个周末的。无奈的是，我的勤奋小人慢慢的就懒惰小人逼到墙角……于是，每到周日，家里开始主动联系我（现在想来，之所以从周六变成周日的原因，或许是因为周六，他们没能等到我的电话的缘故）</p>
+
+<p>这样蛮好，把周末留给我的懒惰小人，疯狂的打游戏，看电影，睡觉，然后睡的昏天黑地，累的一塌糊涂的时候（恩，跟电影《宿醉》情节很像），在周日晚上接到了家里的电话，听着家里的嘱咐，心里又是一顿内疚，一顿反省，然后当天就很见效的学到凌晨一两点。再精神饱满的干上一周……</p>
+
+<p>后来，好吧，就是侥幸心理，当你有一周周末没根家里打电话时，自己会莫名的兴奋许多，好似，自己的周末会然多出了一天假期，明知周一醒来会头痛、懊悔异常，其实，就像惰性一样，能让自己变得勤奋的事情，也会变得有依赖症，或者说，所有认为对你有益的事情，你都会很乐意去做，譬如能疯狂打游戏，譬如能鞭策自己在未来的一顿时间去加倍努力，等等</p>
+
+<p>尤其是当我已经三个星期没跟家里打电话，而且这一星期由于“清明节”假期和周末的缘故休了5天班，一边想着让自己继续放纵，所以，我没有主动打电话；一边内心无比懊悔的自己碌碌无为的这三周，希望能在家人面前得到解脱和救赎。当然，我也并不觉的这两者有任何不可调和之处</p>
+
+<p>谈话一如往常，我静静的听，然后不时调整摄像头，让爸妈能狗清晰的看下儿子最近的改变，尽管并无什么改变，但我仍会这样做，因为他们对儿子的思念之情，至少应该不会比我对他们的思念要淡，况且，我也在仔细看着他俩说话、谈笑的神情，从他们的话语里尽情的揣摩他们最近的生活。多数情况下，我都是在那儿静静的听，想想着爸爸晨练时，佝偻着背，歪着脑袋看护驾山下的樱花开放，看桥边放风筝的大人与孩子，听着爸爸感叹，“恩，真不孬”；想象妈妈晚上遛弯，和她那些电视上学来的独特的健身方法，听妈妈讲她遛弯回来去超市买了点儿菜。我给他们讲我清明节去又去了趟“玉渊潭樱花节”，没有看到樱花，却吃了满嘴沙，他们眼睛闪烁，开心的笑着。只是他们没有我这么幸运，因为他们现在生活的地方，是我生活了二十多年的故土，我可以精确的还原他们的描述的每一个场景，而我讲的许多，他们却无从想起……</p>
+
+<p>爸爸起身离开，留妈妈继续抱怨我死宅在屋里每天对着电脑屏幕不运动，不出门，煞有介事的搬出她那套养生哲学，告诫我不运动的诸多坏处，其实我又何尝不知，但我仍然喜欢它们从妈妈嘴里像曾经训我不用功读书一样严厉道来。爸爸回来，手里拿着一块儿黄色的我不知道名字的瓜，在镜头前晃来晃去，馋我着“出门在外吃不到水果”的儿子，大家开心的笑</p>
+
+<p>谈到吃饭，爸爸数落我和我哥们儿俩</p>
+
+<blockquote><p>“就知道叫外卖，你们两个不能搞个电磁炉，去超市买点儿鸡蛋，西红柿，做个西红柿炒鸡蛋？！又便宜，你们两个人吃的比现在还好。南北方米面来这个应该也差不多少，你们不能自己做点儿？把玩游戏时间拿出来，既能放松大脑，也能锻炼身体，吃的还好，不像外边有地沟油什么的……”</p></blockquote>
+
+<p>从吃饭，开始谈到钱，聊到工资，才发了一个月，而且还是那么点儿，年终奖什么的更还是没谱，我便开脱说自己的状态是因为公司不给钱……他讲我现在不能“一头蒙在被子里”，什么都不去想，自己也不小了，要有点儿打算，不能挣多少花多少，心里一点儿数都没有，爸居然顺便还引经据典“经济基础决定上层建筑”之类云云，没有经济基础，以后没房没车怎么找老婆，我妈在旁附和，“难道你想打一辈子的光棍”，总之，为了以后着想，自己要攒点儿钱，我顿时感觉压力山大</p>
+
+<p>聊到工作，3个星期没给家里联系，看得出来，爸很是担心我，他讲我不能说什么“不在状态”之类，自己过的太安逸，公司太安逸，自己如果现在不努力，以后跳槽都没法跳，如果实在工作中有太多不顺心，就不如去找个明白人，跟着干！你如果一直这样（堕落），是糟践自己，你已经不小了，不是还玩游戏的年纪了……我妈也附和，年纪这么大了，家里也没钱给我买房子，以后租房子结婚，谁会愿意跟你啊……爸结果话茬，不再让妈妈继续说。爸应该很明白我最近的状态和状况，他想给我一些压力，让我有动力去奋斗，又担心我压力太大，自暴自弃，破罐子破摔。言语中满是关切，恨爱交加吧</p>
+
+<p>聊了52分钟，最后爸语气平和的说，“你自己也不小了，自己要多打算打算……”
+换做以前在爸面起，这句话我知道会是以怎样严厉的口吻和表情说出的</p>
+
+<p>关掉视频，心里各种滋味……开心的是，爸妈安好，奶奶安好，只是他们心里都有一些说不出的挂念和担忧</p>
+
+<pre><code>                                                    爸妈，奶奶，哥哥、姐姐
+                                                          我挚爱的亲人，
+                                                               我爱你们
+</code></pre>
+</div>
+      <div class='quick-read-more'><a href='/blog/2012/04/08/%E4%B8%8E%E5%AE%B6%E4%BA%BA%E8%B0%88%E8%AF%9D%E5%90%8E/'>阅读全文...</a></div>
+    </div><br />
+    </div>
+    
+
+  
+    <div class='wp-pagenavi'>
+      <span class='pages'>Total Pages:4</span>
+      
+        
+          <a href='/'>1</a>
+        
+      
+        
+          <a href='/page2/'>2</a>
+        
+      
+        
+          <a href='/page3/'>3</a>
+        
+      
+        
+          <span class='current'>4</span>
+        
+      
+    </div>
+  
+</div>
+          <div class='home_box' id='home_right'>
+            <h2><a href="/aboutme" title="查看详细履历" target="_blank">关于我</a></h2>
+            <div id='github-projects'>
+              <div class="repo">
+                <div class='post'>
+                  <div class="aboutme vcard">
+                    <a href="/aboutme" title="查看详细履历" target="_blank">
+                      <img class="photo" width="82" height="82" style="float:left; margin:5px;" src="http://www.gravatar.com/avatar/6e1bb1a241d9e9fe06980696e21f17fd?s=80">
+                    </a>
+                    <p><strong>前端攻城湿</strong></p>
+                    <p>现就职于<a href="http://meituan.com" _target="blank">美团网</a></p>
+                    <p>对新生事物充满强烈好奇心,各种一知半解</p>
+                    <blockquote><p><strong>轴</strong></p></blockquote>
+                    <p>热爱互联网、热衷命令行，最爱<em><strong>大前端</strong></em></p>
+                    <hr />
+                    <a href="/aboutme" title="查看详细履历" target="_blank">查看详细履历</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h2>最新文章</h2>
+            <div id='github-projects'>
+              <div class="repo">
+                
+                  <div class='post'>
+                    <div class='body'><a href='/blog/2012/10/22/what-i-should-learned/' style="font-size:0.9em">我要学会的</a></div>
+                  </div>
+                
+                  <div class='post'>
+                    <div class='body'><a href='/blog/2012/10/21/i%27m-a-stupig-guy.md/' style="font-size:0.9em">i'm a stupig guy</a></div>
+                  </div>
+                
+                  <div class='post'>
+                    <div class='body'><a href='/blog/2012/08/26/use-nginx-reverse-proxy-for-xmlhttprequest/' style="font-size:0.9em">Web服务器反向代理——跨域的另一种方案</a></div>
+                  </div>
+                
+                  <div class='post'>
+                    <div class='body'><a href='/blog/2012/08/25/i-do-not-even-know-myself/' style="font-size:0.9em">我不懂我自己</a></div>
+                  </div>
+                
+                  <div class='post'>
+                    <div class='body'><a href='/blog/2012/08/20/web-proxy-for-cross-domain-xmlhttprequest-calls/' style="font-size:0.9em">后端代理——跨域的另一种方案</a></div>
+                  </div>
+                
+                  <div class='post'>
+                    <div class='body'><a href='/blog/2012/08/20/use-wget-to-dump-entire-site/' style="font-size:0.9em">使用wget抓取整站资源的脚本</a></div>
+                  </div>
+                
+                  <div class='post'>
+                    <div class='body'><a href='/blog/2012/08/07/technology-selection-about-html5-storage/' style="font-size:0.9em">Web App或者Hybrid App静态资源管理</a></div>
+                  </div>
+                
+                  <div class='post'>
+                    <div class='body'><a href='/blog/2012/07/21/thoughts-about--my-early-get-up/' style="font-size:0.9em">好久没有早起</a></div>
+                  </div>
+                
+                  <div class='post'>
+                    <div class='body'><a href='/blog/2012/07/21/not-a-good-time-to-remember-my-life/' style="font-size:0.9em">何时待追忆</a></div>
+                  </div>
+                
+                  <div class='post'>
+                    <div class='body'><a href='/blog/2012/05/22/differences-between-primitive-wrapper-and-literal-variable-and-its-use-in-javascript/' style="font-size:0.9em">JS对象字面量、构造函数包装对象之间的区别和使用</a></div>
+                  </div>
+                
+              </div>
+            <div>
+
+            <h2>近期评论</h2>
+            <div>
+              <div class="repo">
+                <div id="recentcomments" class="dsq-widget"><script type="text/javascript" src="http://stupig.disqus.com/recent_comments_widget.js?num_items=5&hide_avatars=0&avatar_size=24&excerpt_length=20"></script></div>
+              </div>
+            </div>
+
+            <h2>文章分类</h2>
+            <div>
+              <div class="repo">
+                
+                  <li><a href="/blog/categories/life/">life(9)</a></li>
+                  
+                  <li><a href="/blog/categories/tech/">tech(8)</a></li>
+                  
+                  <li><a href="/blog/categories/work/">work(3)</a></li>
+                  
+               </div>
+            </div>
+
+            <h2>标签</h2>
+            <div>
+              <div style='padding:5px 5px;' class="repo" >
+                <ul style='padding-left:5px; margin: 0px; padding-right: 5px'>
+                  
+                    <li id='tag-item'><a href="/blog/tags/lover/" name="lover">lover</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/literal-value/" name="literal-value">literal value</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/despise/" name="despise">despise</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/thoughts/" name="thoughts">thoughts</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/responsible/" name="responsible">responsible</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/web-proxy/" name="web-proxy">web proxy</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/responsibility/" name="responsibility">responsibility</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/javascript/" name="javascript">javascript</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/indexed-db/" name="indexed-db">Indexed DB</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/inner-peace/" name="inner-peace">inner peace</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/coding-style/" name="coding-style">coding style</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/negative-energy/" name="negative-energy">negative energy</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/ajax/" name="ajax">Ajax</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/peaceful/" name="peaceful">peaceful</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/trouble/" name="trouble">trouble</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/trusted/" name="trusted">trusted</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/love/" name="love">love</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/postmessage/" name="postmessage">postMessage</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/jsonp/" name="jsonp">JSONP</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/initiative/" name="initiative">initiative</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/linux/" name="linux">Linux</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/anguish/" name="anguish">anguish</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/syntax/" name="syntax">syntax</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/upset/" name="upset">upset</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/family/" name="family">family</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/chinese/" name="chinese">chinese</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/bug/" name="bug">bug</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/english/" name="english">english</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/stupig/" name="stupig">stupig</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/stupid/" name="stupid">stupid</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/art/" name="art">art</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/valentine/" name="valentine">valentine</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/php/" name="php">php</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/ecma/" name="ecma">ECMA</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/bash/" name="bash">bash</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/apache/" name="apache">Apache</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/html/" name="html">html</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/youth/" name="youth">youth</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/web-storage/" name="web-storage">web storage</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/college/" name="college">college</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/class-mates/" name="class-mates">class mates</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/care/" name="care">care</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/wget/" name="wget">wget</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/humility/" name="humility">humility</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/cross-domain/" name="cross-domain">cross domain</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/wander-in-beijing/" name="wander-in-beijing">wander in Beijing</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/css3/" name="css3">css3</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/resources-manager/" name="resources-manager">resources manager</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/answer/" name="answer">answer</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/value/" name="value">value</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/reflection/" name="reflection">reflection</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/girls/" name="girls">girls</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/memories/" name="memories">memories</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/depressive/" name="depressive">depressive</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/css/" name="css">css</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/happy/" name="happy">happy</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/professionalization/" name="professionalization">professionalization</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/remember/" name="remember">remember</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/html5/" name="html5">html5</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/nginx/" name="nginx">Nginx</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/ask/" name="ask">ask</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/high-school/" name="high-school">high school</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/shell/" name="shell">shell</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/application-cache/" name="application-cache">application cache</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/shell-script/" name="shell-script">shell script</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/talk/" name="talk">talk</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/primitive-wrapper/" name="primitive-wrapper">primitive wrapper</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/inline-block/" name="inline-block">inline-block</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/reverse-proxy/" name="reverse-proxy">Reverse Proxy</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/growth/" name="growth">growth</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/markdown/" name="markdown">markdown</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/hack/" name="hack">hack</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/web-sql-database/" name="web-sql-database">Web SQL Database</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/life/" name="life">life</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/mac/" name="mac">Mac</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/soul/" name="soul">soul</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/question/" name="question">question</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/literal-variable/" name="literal-variable">literal variable</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/work/" name="work">work</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/jekyll/" name="jekyll">jekyll</a></li>
+                  
+                    <li id='tag-item'><a href="/blog/tags/ie6/" name="ie6">ie6</a></li>
+                  
+                </ul>
+               </div>
+            </div>
+
+            <!-- <h2>存档</h2>
+            <div>
+              <div class="repo">
+                
+                  
+                  
+
+                    
+                  
+                    <li><a href="/archive/ 2012 / 2012 .html">1 2012 1</a></li>
+                  
+                  
+                  
+                  
+                  
+
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+
+                  
+                  
+                  
+                  
+                  
+                  
+              </div>
+            </div> -->
+            <h2>友情链接</h2>
+            <div id='github-projects'>
+              <div class="repo">
+                <div class='post'>
+                  <div class='body'><li><a target='_blank' href='http://www.i607.net' style='font-size:14px' >  607基友  </a></li></div>
+                  <div class='body'><li><a target='_blank' href='http://www.chenft.tk' style='font-size:14px' >  砍柴去吧  </a></li></div>
+                  <div class='body'><li><a target='_blank' href='http://coolshell.cn/' style='font-size:14px' >  酷 壳  </a></li></div>
+                  <div class='body'><li><a target='_blank' href='http://chxt6896.github.com' style='font-size:14px' >  浩宇啸天  </a></li></div>
+                  <div class='body'><li><a target='_blank' href='http://www.pizn.net' style='font-size:14px' >  PIZN  </a></li></div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <a style="display: block; " id="gotop" href="#" title="返回顶部" onfocus="this.blur()"> <span><em class="tr">♦</em><em class="tube">▐</em></span></a>
+    <div id='footer'>
+      <p>
+        Copyright &copy; 2012 StuPig. Hosted by <a href='https://github.com/stupig/stupig.github.com' target='_blank'>GitHub</a> and powered by <a href='http://github.com/mojombo/jekyll'>Jekyll</a>.
+        <script type="text/javascript">
+        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F29cdc1b12b9f146083eca5268e428aad' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+        <script src="http://s20.cnzz.com/stat.php?id=4003192&web_id=4003192&show=pic2" language="JavaScript"></script>
+      </p>
+    </div>
+    <a href="http://github.com/stupig"><img id="fork_me" style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+    <!-- <i607>@eQFdzQ2cnS{</i607> -->
+    <script type="text/javascript">
+		/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'stupig'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript';
+            s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());<!---->
+
+    </script>
+  </body>
+</html>
