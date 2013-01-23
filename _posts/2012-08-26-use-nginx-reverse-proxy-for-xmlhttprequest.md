@@ -52,7 +52,7 @@ keywords: 反向代理, Nginx代理, Ajax跨域
 此处以`Nginx`和`Apache`为例，`Lighttpd`等`Web`服务器同样支持。
 
 **Nginx**
-{% highlight Nginx config files %}
+{% highlight bash %}
  
 # 反向代理到志伟机器
 location /api {
@@ -69,7 +69,7 @@ location /api {
 此时`$_SERVER["REMOTE_ADDR"]`指向的是反向代理的`Nginx`服务器`IP`，通过`$_SERVER["X-Forwarded-For"]`来获取
 
 **Apache**
-{% highlight Apache config files %}
+{% highlight bash %}
  
 <Proxy *>
 Order deny,allow

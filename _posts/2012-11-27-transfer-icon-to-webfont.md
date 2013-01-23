@@ -4,11 +4,17 @@ title: "icon转webfont"
 description: "CSS3 @font-face"
 category: tech
 tags:
-- CSS3
-- @font-face
-- icon
-- CSS scprite
-keywords: CSS3, webfont, 雪碧图, icon, Fontgrapher
+ - CSS3
+ - font-face
+ - icon
+ - CSS scprite
+keywords:
+ - CSS3
+ - webfont
+ - 雪碧图
+ - icon
+ - Fontgrapher
+
 ---
 
 ###神马是webfonts？神马是@font-face？
