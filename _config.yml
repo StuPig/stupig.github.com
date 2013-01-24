@@ -3,7 +3,7 @@ pygments:         true
 paginate:         4
 
 title:            StuPig
-url:              http://127.0.0.1:4000
+url:              http://stupig.me
 feed:             /atom.xml
 author:
     name:         StuPig
