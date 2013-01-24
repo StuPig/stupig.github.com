@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+	<title>弹窗提示</title>
+	<link rel="stylesheet" type="text/css" href="./css/index.css">
+	<script type="text/javascript" src="/lib/jquery-1.4.4.js"></script>
+	<script type="text/javascript" src="/lib/jquery.tmpl.js"></script>
+	<!-- 引入弹窗模板文件 -->
+	<script type="text/javascript" src="./tmpl/popTipsTmpl.js"></script>
+	<script type="text/javascript" src="./js/popTips.js"></script>
+	<!-- 模板文件start -->
+	<!-- 弹窗提示内容的外框 -->
+	<script type="text/x-jquery-tmpl" id="labi_cal_pop_tips_container">
+		<div id=${tipConId} class=${tipConCla}>
+		</div>
+	</script>
+	<!-- 弹窗提示内容的具体部分 -->
+	<script type="text/x-jquery-tmpl" id="labi_cal_pop_tips_content_part">
+		<div class="tip-part ${tiPart}">
+			<div class="tip-topic tip-title ${tipTitle}">
+				${i18nTitle}
+			</div>
+			<div class="tip-detail tip-content ${tipContent}">
+				${content}
+			</div>
+		</div>
+	</script>
+	<!-- 模板文件end -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			 * 模板应按嵌套
+			 */
+			// 事件item
+			var targetObj = $("#content"),
+				tmpDate = new Date(),
+				item = {
+					'title' : 'fadsfasqerjklajkdlfjqweqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqasdkl;fas',
+					'sDatetime' : tmpDate,				// TODO
+					'eDatetime' : new Date( tmpDate.getTime() + 30*60*1000)
+				},
+				i18n = {
+					'popTipTitle' : '内容：',
+					'popTipTime' : '时间：',
+					'popTipRepeat' : '循环'
+				},
+				timeSpan = '13:20-13:50',				// TODO 根据sDatetime和eDatetime 计算timeSpan
+				repeatSummary = '每周三',				// TODO 获取循环摘要
+				gTip = null;
+
+			// “内容”和“时间”是必需的，否则不予显示
+			if ( !item.title || !item.sDatetime || !item.eDatetime ) {
+				return false;
+			}
+
+			var preStr = 'calTip',
+				// 需提前判断item是否同时又title和time，否则不予显示
+				dataCon = [{
+					'tipConId' : (preStr + '_container'),
+					'tipConCla' : (preStr + '-container')
+				}];
+			conTmpl = $('#labi_cal_pop_tips_container').tmpl(dataCon);
+
+			// 多于一行的div样式，对于tip，适用于“内容”和“时间”
+			var titleData = {
+					'tipPart' : (preStr + '-part'),
+					'tipTitle' : (preStr + '-title'),
+					'i18nTitle' : i18n.popTipTitle,
+					'tipContent' : (preStr + '-content'),
+					'content' : item.title
+				},
+				timeData = {
+					'tipPart' : (preStr + '-part'),
+					'tipTitle' : (preStr + '-title'),
+					'i18nTitle' : i18n.popTipTime,
+					'tipContent' : (preStr + '-content'),
+					'content' : timeSpan
+				},
+				titleTmpl = $('#labi_cal_pop_tips_content_part').tmpl(titleData).appendTo(conTmpl),
+				timeTmpl = $('#labi_cal_pop_tips_content_part').tmpl(timeData).appendTo(conTmpl);
+
+				// 判断其他部分是否有，如果有的话进行显示
+				if ( item.repeat) {
+					var repeatData = {
+						'i18nTitle' : i18n.popTipRepeat,
+						'tipContent' : (preStr + '-content'),
+						'content' : repeatSummary
+					};
+					var repeatTmpl = $(partStr).tmpl(repeatData).appendTo(conTmpl);
+				} else if (item.xxx) {
+					// statement
+				}
+
+
+				$(document).bind('mousedown', function(e) {
+					gTip = gTips({
+						'tmplObj' : conTmpl,
+						/* 将event传入(e) */
+						'e' : e,
+						'targetObj' : targetObj
+					});
+				}).bind('mouseup', function(e) {
+					gTip.remove();
+				});
+		});
+	</script>
+</head>
+<body>
+<div style="text-align: center;">
+jQuery探测位置提示弹窗 | <a href='http://stupig.me' target='_blank' title="StuPig.me">stupig</a>
+</div>
+<hr >
+<div id="content" class="content">
+
+</div>
+</body>
+</html>

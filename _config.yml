@@ -1,0 +1,35 @@
+markdown:         rdiscount
+pygments:         true
+paginate:         4
+
+title:            StuPig
+url:              http://127.0.0.1:4000
+feed:             /atom.xml
+author:
+    name:         StuPig
+    email:        shouqiang.gong@gmail.com
+    description:  "简单生活，纯粹技术。关乎前端，关乎喜乐"
+
+about:            "简单生活，纯粹技术。这里见证着StuPig心智的成长"
+follow:
+    email:        shouqiang.gong@gmail.com
+    github:       https://github.com/stupig
+    twitter:      http://www.twitter.com/garyfromchina
+    google:       https://plus.google.com/103906914425398350686
+    facebook:     http://facebook.com/shouqiang.gong
+description:      简单生活，纯粹技术。关乎前端，关乎喜乐
+
+indexContent:     true
+imageLink:        images/StuPig.jpg
+
+
+style:            /css/style.css
+blogName:         StuPig
+blogDesc:         "StuPig\'s View Of Life"
+favicon:          /favicon.ico
+theme:            default
+
+disqus:           stupig
+
+copyright:        Copyright © 2011-2013 StuPig All rights reserved.
+test:             ok

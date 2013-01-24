@@ -1,0 +1,124 @@
+/**
+ * 弹窗提示的样式
+ */
+
+/* tmp */
+.content {
+	height: 300px;
+	width: 300px;
+	border: 1px solid red;
+	margin-top: 100px;
+	margin-left: 100px;
+}
+
+/* 容器的样式 */
+.gary-con {
+	position: absolute;
+}
+/* 外框（内容）的样式 */
+.gary-outercon {
+	padding : 6px 5px 7px 10px;
+	width : 196px;
+	background-color : #fff;
+	/* border的样式，border为外框和箭头颜色 */
+	border : 2px solid #ededed;
+	position: relative;
+}
+/* 指向上 */
+.gary-arrow-b-top {
+	border-color: transparent transparent #ededed transparent;
+	border-style: dashed dashed solid dashed;
+	border-width: 0 8px 8px 8px;
+	width: 0;
+	height: 0;
+	position: relative;
+	z-index: 9;
+}
+.gary-arrow-p-top {
+	border-color: transparent transparent #fff transparent;
+	border-style: dashed dashed solid dashed;
+	border-width: 0 8px 8px 8px;
+	width: 0;
+	height: 0;
+	/*该值用来调整位置*/
+	margin: 2px 0 0 -8px;
+	position: absolute;
+}
+/* 指向右 */
+.gary-arrow-b-right {
+	border-color: transparent transparent transparent #ededed;
+	border-style: dashed dashed dashed solid;
+	border-width: 8px 0 8px 8px;
+	width: 0;
+	height: 0;
+	position: relative;
+	z-index: 9;
+}
+.gary-arrow-p-right {
+	border-color: transparent transparent transparent #fff;
+	border-style: dashed dashed dashed solid;
+	border-width: 8px 0 8px 8px;
+	width: 0;
+	height: 0;
+	/*该值用来调整位置*/
+	margin: -8px 0 0 -10px;
+	position: absolute;
+}
+/* 指向下 */
+.gary-arrow-b-bottom {
+	border-color: #ededed transparent transparent transparent;
+	border-style: solid dashed dashed dashed;
+	border-width: 8px 8px 0 8px;
+	width: 0;
+	height: 0;
+	position: relative;
+	z-index: 9;
+}
+.gary-arrow-p-bottom {
+	border-color: #fff transparent transparent transparent;
+	border-style: solid dashed dashed dashed;
+	border-width: 8px 8px 0 8px;
+	width: 0;
+	height: 0;
+	/*该值用来调整位置*/
+	margin: -10px 0 0 -8px;
+	position: absolute;
+}
+/* 指向左 */
+.gary-arrow-b-left {
+	border-color: transparent #ededed transparent transparent;
+	border-style: dashed solid dashed dashed;
+	border-width: 8px 8px 8px 0;
+	width: 0;
+	height: 0;
+	position: relative;
+	z-index: 9;
+}
+.gary-arrow-p-left {
+	border-color: transparent #fff transparent transparent;
+	border-style: dashed solid dashed dashed;
+	border-width: 8px 8px 8px 0;
+	width: 0;
+	height: 0;
+	/*该值用来调整位置*/
+	margin: -8px 0 0 2px;
+	position: absolute;
+}
+.tip-topic {
+	font-size: 12px;
+	line-height: 12px;
+	color: #999;
+}
+.tip-title {
+	padding: 0 0 5px 0;
+}
+.tip-detail {
+	font-size: 14px;
+	line-height: 14px;
+	color: #333;
+	word-wrap: break-word;
+	word-break: normal;
+}
+.tip-content {
+	padding: 0 0 13px 0
+}

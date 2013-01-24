@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'stupig';
+  src: url("/funny/webfont/font/meituan-Monospaced.eot");  /* IE9*/
+  src: url("/funny/webfont/font/meituan-Monospaced.eot?#iefix") format('embedded-opentype'), /* IE6-IE8 */
+       url("/funny/webfont/font/meituan-Monospaced.woff") format('woff'), /* chrome-firefox */
+       url("/funny/webfont/font/meituan-Monospaced.ttf") format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+       url("/funny/webfont/font/meituan-Monospaced.svg#stupig") format('svg'); /*  iOS 4.1- */
+  font-weight: normal;
+  font-style: normal;
+}
+.the-icons i {
+  font-family: 'stupig';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  /* opacity: 0.7; */
+/* Uncomment for 3D effect */
+/* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+/* fix buttons height */
+  line-height: 1em;
+/* you can be more comfortable with increased icons size */
+/* font-size: 120%; */
+}
