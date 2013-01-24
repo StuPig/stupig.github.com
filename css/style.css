@@ -410,7 +410,7 @@ h1, h2, h3, h4, h5, h6{ font-weight: 500; color:#333; }
 .post li ul { list-style: circle; }
 .post table th, .post table td { border: 1px solid #ddd; padding: 5px 10px; }
 .post table th { background: #f8f8f8; }
-.post em { font-weight: 700; }
+.post em { font-weight: 600; font-style: italic; }
 .post .clearLeft { margin-left: -40px; }
 .post img, .post audio, .post iframe, .post audio, .post canvas, .post video { max-width: 720px; }
 .post .post-title { margin-left: -40px; margin-bottom: 10px; padding: 4px 0 4px 40px; background: #f8f8f8;  border-top: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8;   }

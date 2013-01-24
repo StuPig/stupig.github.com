@@ -22,7 +22,7 @@ keywords:
 ---
 _原文地址是：[http://calendar.perfplanet.com/2012/proactive-web-performance-optimization](http://calendar.perfplanet.com/2012/proactive-web-performance-optimization)_
 
-_文章作者[`Marcel Duran`](http://twitter.com/marcelduran)，也是YSlow的作者，twitter前端工程师，之前是Yahoo性能团队leader_
+_文章作者[Marcel Duran](http://twitter.com/marcelduran)，也是YSlow的作者，twitter前端工程师，之前是Yahoo性能团队leader_
 
 _简单意译了一下，看官勿喷。同时，期望能够在未来i版上使用此方式_
 
