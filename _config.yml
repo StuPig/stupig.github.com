@@ -27,7 +27,7 @@ style:            /css/style.css
 blogName:         StuPig
 blogDesc:         "StuPig\'s View Of Life"
 favicon:          /favicon.ico
-theme:            default
+theme:            pink
 
 disqus:           stupig
 
