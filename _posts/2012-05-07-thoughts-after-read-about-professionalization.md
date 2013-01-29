@@ -1,6 +1,3 @@
-
-
-
 ---
 layout: post
 title: "读《关于“职业化”的思考》有感（“Geek”与“产品机器”）"
@@ -12,7 +9,14 @@ tags:
  - responsibility
  - trusted
  - initiative
-keywords: 读《关于“职业化”的思考》有感,想法,“职业”化思考,责任感,可信任感,主动性,“Geek”与“产品机器”
+keywords: 
+ - 读《关于“职业化”的思考》有感
+ - 想法
+ - “职业”化思考
+ - 责任感
+ - 可信任感
+ - 主动性
+ - “Geek”与“产品机器”
 ---
 ###职业化
 [《关于“职业化”的思考》](http://www.alloyteam.com/2012/05/about-professionalization-1/)是来自[腾讯AlloyTeam](http://www.alloyteam.com/2012/05/about-professionalization-1/)的博客，介绍了互联网技术人所应该具备的“职业化”素养。看完之后，用一句装13的话说就是“I can't agree more”。
