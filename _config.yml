@@ -28,7 +28,7 @@ syntax:           /css/syntax.css
 blogName:         StuPig
 blogDesc:         "StuPig's View Of Life"
 favicon:          /favicon.ico
-theme:            pink
+theme:            green
 
 disqus:           stupig
 
