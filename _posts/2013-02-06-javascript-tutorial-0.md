@@ -83,7 +83,7 @@ NaN——非数值（Not a Number），同时无法转换成数值，与任何�
 {%highlight javascript%}
 NaN == NaN;			// false
 isNaN(NaN);			// true
-isNaN("10");		// true，可以被转换成数值
+isNaN("10");		// false，可以被转换成数值
 isNaN(false);		// false，可以被转换成数值
 isNaN("number");	// true，非数值，同时，无法被转换成数值
 {%endhighlight%}
