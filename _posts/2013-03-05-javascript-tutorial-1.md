@@ -52,7 +52,7 @@ String(vUndeclare); // ReferenceError: vUndeclare is not defined
   
 **Number调用时：**
 
-这里加入有数字m:
+这里假如有数字m:
 
 1. NaN -- "NaN"
 2. m为+0或-0 -- "0"
@@ -85,6 +85,7 @@ var b0 = --a0 + 2;
 a0;     // 28
 b0;     // 30
 
+
 var a1 = 29;
 var b1 = a1-- + 2;
 
@@ -102,7 +103,7 @@ var b = 5;  // 0101
 
 a & b;      // 0001 即 1
 {%endhighlight%}
-[按位或(&)](http://ecma-international.org/ecma-262/5.1/#sec-11.10)：
+[按位或(|)](http://ecma-international.org/ecma-262/5.1/#sec-11.10)：
 
 {%highlight javascript%}
 var a = 9;  // 1001
