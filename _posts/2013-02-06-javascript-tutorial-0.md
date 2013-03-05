@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "“JS高程”读书笔记0"
-description: "如何把mobile page打开时间控制在1s内，make your mobile pages render in under one second"
+description: "ECMAScript,“JS”高程读书笔记,JavaScript基础学习"
 category: tech
 tags: 
  - JavaScript
