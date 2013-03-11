@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+    .bar {
+        fill: brown;
+    }
+    .axis text {
+        font: 10px sans-serif;
+    }
+
+    .axis path,
+    .axis line {
+        fill: none;
+        stroke: #000;
+        shape-rendering: crispEdges;
+    }
+    .line {
+          fill: none;
+          stroke: steelblue;
+          stroke-width: 1.5px;
+    }
+    </style>
+</head>
+<body>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script>
+        var data = [0.10, 0.30, 0.50, 0.60, 0.70, 0.90];
+        var margin = {top:30, right:10, bottom:10, left: 10},
+            width = 960 - margin.left - margin.right,
+            height = 500 - margin.top - margin.bottom
+
+        // test value
+        var value = [1200, 4600, 2400, 3800, 0, 0];
+        var x0 = Math.max(-d3.min(value), d3.max(value));
+
+        var x = d3.scale.linear()
+                .domain([-x0, x0])
+                .range([0, width])
+                .nice();
+
+        var y = d3.scale.ordinal()
+                .domain(d3.range(data.length))
+                .rangeRoundBands([0, height], .2)
+
+        var svg = d3.select('body').append('svg')
+                    .attr('width', width + margin.left + margin.right)
+                    .attr('height', height + margin.top + margin.bottom)
+                    .append('g')
+                    .attr('transform', '(translate(' + margin.left + ',' + margin.top + ')');
+
+        var line0 = d3.svg.line()
+                    .x(function(d, i) { return x(d/2) })
+                    .y(function(d, i) { return (y(i) + y.rangeBand()/2) })
+
+        var line1 = d3.svg.line()
+                    .x(function(d, i) { return x(-d/2) })
+                    .y(function(d, i) { return (y(i) + y.rangeBand()/2) })
+
+        svg.selectAll('.bar')
+            .data(value)
+            .enter().append('a')
+                .attr('xlink:href', function(d) { return 'http://stupig.me/?money=' + d })
+                .attr('class', 'bar')
+                .append('rect')
+                    .attr('x', function(d) { return x(Math.min(-d/2, d/2)); })
+                    .attr('y', function(d, i) { return y(i); })
+                    .attr('width', function(d) { return Math.abs(x(d) - x(0)); })
+                    .attr('height', y.rangeBand())
+
+        svg.selectAll('.text')
+            .data(value)
+            .enter().append('text')
+                .attr('class', 'text')
+                .attr('x', function(d) { return x(0); })
+                .attr('y', function(d, i) { return (y(i) + y.rangeBand()/2); })
+                .text(function(d, i) { return (data[i] * 100) + '%' })
+
+        svg.append('g')
+            .attr('class', 'y axis')
+            .append('line')
+                .attr('x1', x(0))
+                .attr('x2', x(0))
+                .attr('y1', 0)
+                .attr('y2', height)
+
+        svg.append('path')
+            .datum(value)
+            .attr('class', 'line')
+            .attr('d', line0)
+
+        svg.append('path')
+            .datum(value)
+            .attr('class', 'line')
+            .attr('d', line1)
+    </script>
+</body>
+</html>
