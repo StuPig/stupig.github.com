@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>吴迪童鞋剩余时间计算器</title>
+</head>
+<body>
+    <input id="yt_night" type="number" value='' placeholder="晚上可用时间(小时)" />
+    <input id="yt_weekend" type="number" value='' placeholder="周末可用时间(小时)" />
+    <input id="yt_oneBookTime" type="number" value='' placeholder="一本书需要的时间(小时)" />
+    <input id="yt_oneExam" type="number" value='' placeholder="一套题用的时间(小时)" />
+    <input id="examCount" type="number" value='' placeholder="一本习题集的有多少套题" />
+
+    <hr />
+    <b>亲，</b>
+    <p>你认为你的可用时间是 <span id="yt_totaltime"></span>小时</p>
+    <p>实际时间是 <span id="real_totaltime"></span>小时</p>
+    <br />
+    <p>你读完一本书大约需要 <span id="real_oneBookTime"></span>小时</p>
+    <p>你不读书做完一套题集多月需要 <span id="real_examTime"></span>小时</p>
+    <script>
+        var yt_night = 4;
+        var yt_weekend = 16;
+        var remainWeekends = 4;
+        var remainWeekdays = 5 * 5;
+        var yt_totaltime
+        var totalTimePercent = 2 / 3;
+        var real_totaltime
+
+        var oneBookTimeTimes = 4;
+        var real_oneBookTime
+        var examCount
+
+        var yt_oneExam = 2;
+        var real_examTime
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var elYt_night = document.querySelector('#yt_night'),
+                elYt_weekend = document.querySelector('#yt_weekend'),
+                elYt_oneBookTime = document.querySelector('#yt_oneBookTime'),
+                elYt_oneExam = document.querySelector('#yt_oneExam'),
+                elYt_examCount = document.querySelector('#examCount')
+
+            elYt_night.addEventListener('change', function() {
+                yt_night = this.value;
+
+                if (yt_night && yt_weekend && yt_oneBookTime && yt_oneExam && examCount)
+                    haha();
+            })
+
+            elYt_weekend.addEventListener('change', function() {
+                yt_weekend = this.value;
+
+                if (yt_night && yt_weekend && yt_oneBookTime && yt_oneExam && examCount)
+                    haha();
+            })
+
+            elYt_oneBookTime.addEventListener('change', function() {
+                yt_oneBookTime = this.value;
+
+                if (yt_night && yt_weekend && yt_oneBookTime && yt_oneExam && examCount)
+                    haha();
+            })
+
+            elYt_oneExam.addEventListener('change', function() {
+                yt_oneExam = this.value;
+
+                if (yt_night && yt_weekend && yt_oneBookTime && yt_oneExam && examCount)
+                    haha();
+            })
+
+            elYt_examCount.addEventListener('change', function() {
+                examCount = this.value;
+
+                if (yt_night && yt_weekend && yt_oneBookTime && yt_oneExam && examCount)
+                    haha();
+            })
+
+            function haha() {
+                var yt_totaltime = yt_night * remainWeekdays * 5 + yt_weekend * remainWeekends * 16;
+                var real_totaltime = yt_totaltime * totalTimePercent;
+                var real_examTime = yt_oneExam * examCount * 12;
+                var real_oneBookTime = yt_oneBookTime * oneBookTimeTimes;
+
+                // var elYt_totaltime = document.querySelector('#yt_totaltime')
+                // var elReal_totaltime = document.querySelector('#real_totaltime')
+                // var elReal_oneBookTime = document.querySelector('#real_oneBookTime')
+                // var elReal_examTime = document.querySelector('#real_examTime')
+
+                document.querySelector('#yt_totaltime').innerText = yt_totaltime
+                document.querySelector('#real_totaltime').innerText = real_totaltime
+                document.querySelector('#real_oneBookTime').innerText = real_oneBookTime
+                document.querySelector('#real_examTime').innerText = real_examTime
+            }
+        });
+    </script>
+</body>
+</html>
