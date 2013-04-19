@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width">
+<style>
+section {
+    position: relative;
+    height: 100px;
+    margin: 10px;
+}
+div {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+div.over {
+    background-color: green;
+}
+</style>
+</head>
+<body>
+<h1>Tap <tt>preventDefault</tt> demo</h1>
+<p>Both squares have a tap event listener that hides the element and shows the element below it.  The first doesn't have <tt>preventDefault</tt> and a click event occurs on the element below it.  The second calls <tt>preventDefault</tt>, blokcing the click event on the element beneath.</p>
+<section class="default">
+    <div class="under"></div>
+    <div class="over">Default not prevented</div>
+</section>
+<section class="preventDefault">
+    <div class="under"></div>
+    <div class="over">Default prevented</div>
+</section>
+<section class="double">
+    <div class="under"></div>
+    <div class="over">Default prevented</div>
+</section>
+<script src="../js/zepto.js"></script>
+<script>
+$(function () {
+    $('.under').on('click', function () {
+        alert('under clicked');
+    });
+
+    $('.default .over').on('tap', function (e) {
+        console.log('tap')
+
+        $(this).hide();
+    });
+
+    $('.preventDefault .over').on('tap', function (e) {
+        e.preventDefault();
+
+        $(this).hide();
+    });
+
+    $('.double .over').on('doubleTap', function (e) {
+        e.preventDefault();
+
+        console.log('doubleTap')
+        $(this).hide();
+    });
+});
+</script>
+</body>
+</html>
