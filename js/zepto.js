@@ -1775,7 +1775,8 @@ window.Zepto = Zepto
           touch.el.trigger(event)
 
           // prevent broswer's default 'click' event if last 'tap' event is default prevented
-          if (event.defaultPrevented || !Event.prototype.stopImmediatePropagation) e.preventDefault(), e.stopPropagation()
+          // if (event.defaultPrevented || !Event.prototype.stopImmediatePropagation) e.preventDefault(), e.stopPropagation()
+          e.preventDefault(), e.stopPropagation()
 
           // delay by one tick so we can cancel the 'tap' event if 'scroll' fires
           // ('tap' fires before 'scroll')
@@ -1784,6 +1785,7 @@ window.Zepto = Zepto
             // trigger double tap immediately
             if (touch.isDoubleTap) {
               touch.el.trigger('doubleTap')
+              e.preventDefault(), e.stopPropagation()
               touch = {}
             }
 
