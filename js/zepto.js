@@ -1784,6 +1784,7 @@ window.Zepto = Zepto
             // trigger double tap immediately
             if (touch.isDoubleTap) {
               touch.el.trigger('doubleTap')
+              e.preventDefault(), e.stopPropagation()
               touch = {}
             }
 
