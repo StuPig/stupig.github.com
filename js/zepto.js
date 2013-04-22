@@ -1755,7 +1755,7 @@ window.Zepto = Zepto
       .bind('touchend', function(e){
          cancelLongTap()
 
-         e.preventDefault()
+         e.preventDefault(), e.stopPropagation()
 
         // swipe
         if ((touch.x2 && Math.abs(touch.x1 - touch.x2) > 30) ||

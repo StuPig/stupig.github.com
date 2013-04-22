@@ -104,7 +104,6 @@ _client page:_
     <script src="js/lib/underscore.js"></script>
     <script src="js/lib/backbone.js"></script>
     <script>
-      // ROOT_URL = 'http://www.gsqmt.dev.sankuai.com/api/v4/dealasync';
       var ROOT_URL = '/backbone/webservice/deals.php';
  
       Backbone.emulateHTTP = true;
