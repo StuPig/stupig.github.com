@@ -9,6 +9,9 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="format-detection" content="telephone=no" />
     <style>
+        p {
+            -webkit-tap-highlight-color: transparent;
+        }
         .mask {
             position: absolute;
             top: 0;
@@ -45,37 +48,56 @@
         }
 
         .main {
+            /* position: relative !important; */
+            /* min-width: 15em; */
+            /* min-height: 15em; */
+            /* background: #FFF; */
+            /* /* max-width: 20em; */ */
+            /* max-height: 90%; */
+            /* margin: .5em; */
+            /* /* -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 0.1em 0.5em; */ */
+            /* /* box-shadow: rgba(0, 0, 0, 0.4) 0 0.1em 0.5em; */ */
+            /* -webkit-border-radius: 0.3em; */
+            /* border-radius: 0.3em; */
+            /* border: 0.15em solid #1985d0; */
+            /* z-index: 999; */
             position: relative !important;
-            min-width: 15em;
-            max-width: 20em;
-            max-height: 90%;
-            margin: .5em;
-            -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 0.1em 0.5em;
-            box-shadow: rgba(0, 0, 0, 0.4) 0 0.1em 0.5em;
-            -webkit-border-radius: 0.3em;
-            border-radius: 0.3em;
-            border: 0.15em solid #1985d0;
+            background: #F7F7F6;
+            margin-right: auto;
+            margin-left: auto;
+            border: 1px solid rgba(0, 0, 0, 0.25);
+            border-radius: 3px;
+            max-width: 282px;
+            position: relative;
             z-index: 999;
+            min-width: 282px;
+            display: block;
         }
 
         article {
             position: relative;
             z-index: 2;
         }
+
+        input {
+            height: 60px;
+            width: 100%
+        }
     </style>
 </head>
 <body>
     <article>
-        <input type="text" class="input-text" />
-        <input type="text" class="input-text" />
-        <input type="button" class="input-text" id="pop-button" value="click" />
-        <input type="text" class="input-text" />
-        <input type="text" class="input-text" />
-        <input type="text" class="input-text" />
+    <p><input type="password" class="input-text" placeholder="手机号/Email" name="email" value="" required /></p>
+        <p><input type="password" class="input-text"  placeholder="手机号/Email" name="email" value="" required /></p>
+        <p><input type="button" class="input-text" id="pop-button" value="click" /></p>
+        <p><input type="password" class="input-text"  placeholder="手机号/Email" name="email" value="" required /></p>
+        <p><input type="password" class="input-text"  placeholder="手机号/Email" name="email" value="" required /></p>
+        <p><input type="password" class="input-text"  placeholder="手机号/Email" name="email" value="" required /></p>
     </article>
     <div id="mask" class="mask"></div>
     <div id="content" class="content">
         <div id="main" class="main">
+            <p>test</p>
             <input type="text" placeholder="try to input something..." />
         </div>
     </div>

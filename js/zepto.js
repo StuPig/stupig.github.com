@@ -1,5 +1,38 @@
-/* Zepto v1.0rc1-170-g88cadb5 - zepto polyfill event detect fx fx_methods ajax form data touch - zeptojs.com/license */
+/* Zepto v1.0rc1-172-g63f5336 - polyfill zepto event detect fx fx_methods ajax form data touch - zeptojs.com/license */
 
+
+;(function(undefined){
+  if (String.prototype.trim === undefined) // fix for iOS 3.2
+    String.prototype.trim = function(){ return this.replace(/^\s+|\s+$/g, '') }
+
+  // For iOS 3.x
+  // from https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/reduce
+  if (Array.prototype.reduce === undefined)
+    Array.prototype.reduce = function(fun){
+      if(this === void 0 || this === null) throw new TypeError()
+      var t = Object(this), len = t.length >>> 0, k = 0, accumulator
+      if(typeof fun != 'function') throw new TypeError()
+      if(len == 0 && arguments.length == 1) throw new TypeError()
+
+      if(arguments.length >= 2)
+       accumulator = arguments[1]
+      else
+        do{
+          if(k in t){
+            accumulator = t[k++]
+            break
+          }
+          if(++k >= len) throw new TypeError()
+        } while (true)
+
+      while (k < len){
+        if(k in t) accumulator = fun.call(undefined, accumulator, t[k], k, t)
+        k++
+      }
+      return accumulator
+    }
+
+})()
 
 var Zepto = (function() {
   var undefined, key, $, classList, emptyArray = [], slice = emptyArray.slice, filter = emptyArray.filter,
@@ -787,39 +820,6 @@ var Zepto = (function() {
 window.Zepto = Zepto
 '$' in window || (window.$ = Zepto)
 
-;(function(undefined){
-  if (String.prototype.trim === undefined) // fix for iOS 3.2
-    String.prototype.trim = function(){ return this.replace(/^\s+|\s+$/g, '') }
-
-  // For iOS 3.x
-  // from https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/reduce
-  if (Array.prototype.reduce === undefined)
-    Array.prototype.reduce = function(fun){
-      if(this === void 0 || this === null) throw new TypeError()
-      var t = Object(this), len = t.length >>> 0, k = 0, accumulator
-      if(typeof fun != 'function') throw new TypeError()
-      if(len == 0 && arguments.length == 1) throw new TypeError()
-
-      if(arguments.length >= 2)
-       accumulator = arguments[1]
-      else
-        do{
-          if(k in t){
-            accumulator = t[k++]
-            break
-          }
-          if(++k >= len) throw new TypeError()
-        } while (true)
-
-      while (k < len){
-        if(k in t) accumulator = fun.call(undefined, accumulator, t[k], k, t)
-        k++
-      }
-      return accumulator
-    }
-
-})()
-
 ;(function($){
   var $$ = $.zepto.qsa, handlers = {}, _zid = 1, specialEvents={},
       hover = { mouseenter: 'mouseover', mouseleave: 'mouseout' }
@@ -911,9 +911,9 @@ window.Zepto = Zepto
     }
   }
 
-  $.fn.bind = function(event, callback){
+  $.fn.bind = function(event, callback, capture){
     return this.each(function(){
-      add(this, event, callback)
+      add(this, event, callback, null, null, capture)
     })
   }
   $.fn.unbind = function(event, callback){
@@ -921,7 +921,7 @@ window.Zepto = Zepto
       remove(this, event, callback)
     })
   }
-  $.fn.one = function(event, callback){
+  $.fn.one = function(event, callback, capture){
     return this.each(function(i, element){
       add(this, event, callback, null, function(fn, type){
         return function(){
@@ -929,7 +929,7 @@ window.Zepto = Zepto
           remove(element, type, fn)
           return result
         }
-      })
+      }, capture)
     })
   }
 
@@ -996,9 +996,9 @@ window.Zepto = Zepto
     return this
   }
 
-  $.fn.on = function(event, selector, callback){
+  $.fn.on = function(event, selector, callback, capture){
     return !selector || $.isFunction(selector) ?
-      this.bind(event, selector || callback) : this.delegate(selector, event, callback)
+      this.bind(event, selector || callback, capture) : this.delegate(selector, event, callback)
   }
   $.fn.off = function(event, selector, callback){
     return !selector || $.isFunction(selector) ?
@@ -1731,7 +1731,7 @@ window.Zepto = Zepto
   }
 
   $(document).ready(function(){
-    var now, delta
+    var now, delta, lastTapDefaultPrevented
 
     $(document.body)
       .bind('touchstart', function(e){
@@ -1741,7 +1741,11 @@ window.Zepto = Zepto
         touchTimeout && clearTimeout(touchTimeout)
         touch.x1 = e.touches[0].pageX
         touch.y1 = e.touches[0].pageY
-        if (delta > 0 && delta <= 250) touch.isDoubleTap = true
+        if (delta > 0 && delta <= 250) {
+          // double tap then prevent the zoom
+          e.preventDefault()
+          touch.isDoubleTap = true
+        }
         touch.last = now
         longTapTimeout = setTimeout(longTap, longTapDelay)
       })
@@ -1755,8 +1759,6 @@ window.Zepto = Zepto
       .bind('touchend', function(e){
          cancelLongTap()
 
-         e.preventDefault(), e.stopPropagation()
-
         // swipe
         if ((touch.x2 && Math.abs(touch.x1 - touch.x2) > 30) ||
             (touch.y2 && Math.abs(touch.y1 - touch.y2) > 30))
@@ -1768,20 +1770,20 @@ window.Zepto = Zepto
           }, 0)
 
         // normal tap
-        else if ('last' in touch) {
-
-          // trigger universal 'tap' with the option to cancelTouch()
-          // (cancelTouch cancels processing of single vs double taps for faster 'tap' response)
-          var event = $.Event('tap')
-          event.cancelTouch = cancelAll
-          touch.el.trigger(event)
-
-          // prevent broswer's default 'click' event if last 'tap' event is default prevented
-          if (event.defaultPrevented) e.preventDefault(), e.stopPropagation()
+        else if ('last' in touch)
 
           // delay by one tick so we can cancel the 'tap' event if 'scroll' fires
           // ('tap' fires before 'scroll')
           tapTimeout = setTimeout(function() {
+
+            // trigger universal 'tap' with the option to cancelTouch()
+            // (cancelTouch cancels processing of single vs double taps for faster 'tap' response)
+            var event = $.Event('tap')
+            event.cancelTouch = cancelAll
+            touch.el.trigger(event)
+
+            if (event.defaultPrevented)
+              lastTapDefaultPrevented = true
 
             // trigger double tap immediately
             if (touch.isDoubleTap) {
@@ -1799,9 +1801,16 @@ window.Zepto = Zepto
             }
 
           }, 0)
-        }
+
       })
       .bind('touchcancel', cancelAll)
+      .bind('click', function(e) {
+        // prevent browser's default click event if last tap event is default prevented
+        if (lastTapDefaultPrevented) {
+          lastTapDefaultPrevented = false
+          e.stopPropagation()
+        }
+      }, true)
 
     $(window).bind('scroll', cancelAll)
   })

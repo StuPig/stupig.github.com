@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>CSS3 Cycle Slider</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400italic,400,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    <meta name="description" content="A CSS3 Cycling Slideshow! Thanks to CSS3, we can create effects and animations without using JavaScript, which will facilitate the work of many designers." />
+    <meta name="keywords" content="CSS3, CSS3 Slideshow, HTML/CSS Tutorials, Smashing Magazine" />
+    <script src="//zeptojs.com/zepto.js"></script>
+    <script src="jQuery.carousel.js"></script>
+</head>
+<body>
+    <div class="content">
+        <h1>CSS3 Cycle Slider</h1>
+    </div>
+
+    <div class="container">
+        <div id="content-slider">
+        </div>
+    </div>
+    <script>
+    $(function() {
+        var bannerList = [
+            {
+                url: 'http://www.alessioatzeni.com/CSS3-Cycle-Image-Slider/images/img_1.jpg'
+            },
+            {
+                url: 'http://www.alessioatzeni.com/CSS3-Cycle-Image-Slider/images/img_2.jpg'
+            },
+            {
+                url: 'http://www.alessioatzeni.com/CSS3-Cycle-Image-Slider/images/img_3.jpg'
+            },
+            {
+                url: 'http://www.alessioatzeni.com/CSS3-Cycle-Image-Slider/images/img_4.jpg'
+            },
+            {
+                url: 'http://www.alessioatzeni.com/CSS3-Cycle-Image-Slider/images/img_5.jpg'
+            }
+        ];
+
+        var snippet = generateSnippet(bannerList);
+
+        $('#content-slider').carousel({
+            // items: bannerList,
+            snippet: snippet,
+            direction: 'vertical',
+            transfer: 'fade'
+        })
+
+        function generateSnippet(items) {
+            var src = '';
+
+            items.forEach(function(item, index) {
+                src += '\
+                    <li class="animation' + index + '">\
+                        <img src="' + item.url + '" />\
+                    </li>\
+                ';
+            });
+
+            return src;
+        }
+    })
+    </script>
+</body>
+</html>
