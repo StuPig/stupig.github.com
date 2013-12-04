@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>event bus test</title>
+    <script src="eventbus.js"></script>
+</head>
+<body>
+    <button id="a">trigger 'a'</button>
+    <button id="a&b">trigger 'a b'</button>
+    <button id="c">trigger once c</button>
+    <button id="a2">bind a with handler a2</button>
+    <button id="ua2">unbind handler a2</button>
+    <button id="ua">unbind all 'a''s handlers</button>
+    <button id="uall">unbind all</button>
+    <script>
+        var a1 = function() {
+            console.log( 'a1 ----------', arguments )
+        }
+        var a2 = function() {
+            console.log( 'a2 ----------', arguments )
+        }
+        var b = function() {
+            console.log( 'b ----------', arguments )
+        }
+        var c = function() {
+            console.log( 'c ----------', arguments )
+        }
+        var all = function() {
+            console.log( 'all ----------', arguments )
+        }
+
+        EventBus
+            .bind('a', a1)
+            .bind('b', b)
+            .one('c', c)
+            .bind('all', all);
+
+        function $(id) { return document.getElementById(id) }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            $('a').addEventListener('click', function() {
+                console.log( 'clicking --------------- ' + this.id )
+
+                EventBus.trigger('a')
+            })
+            $('a&b').addEventListener('click', function() {
+                console.log( 'clicking --------------- ' + this.id )
+
+                EventBus.trigger('a b')
+            })
+            $('a2').addEventListener('click', function() {
+                console.log( 'clicking --------------- ' + this.id )
+
+                EventBus.bind('a', a2)
+            })
+            $('ua2').addEventListener('click', function() {
+                console.log( 'clicking --------------- ' + this.id )
+
+                EventBus.unbind('a', a2)
+            })
+            $('ua').addEventListener('click', function() {
+                console.log( 'clicking --------------- ' + this.id )
+
+                EventBus.unbind('a')
+            })
+            $('c').addEventListener('click', function() {
+                console.log( 'clicking --------------- ' + this.id )
+
+                EventBus.trigger('c')
+            })
+            $('uall').addEventListener('click', function() {
+                console.log( 'clicking --------------- ' + this.id )
+
+                EventBus.unbind()
+            })
+        })
+
+    </script>
+</body>
+</html>
