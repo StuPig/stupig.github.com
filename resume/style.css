@@ -496,8 +496,9 @@ div.education-wrapper,div.skills-wrapper,footer {
     border-top: 1px solid #ccc;
 }
 
-.skills-wrapper {
-    margin-top: 1em;
+.skills-wrapper .content,
+.code-wrapper .content {
+    padding-top: 2em;
 }
 
 ul.skills {
@@ -694,10 +695,6 @@ h1 {
     margin-bottom: 10em;
 }
 
-.code-wrapper {
-    margin-top: 1em;
-}
-
 .wrap {
     border-top: 1px solid black;
     margin-top: 5em;
@@ -712,6 +709,9 @@ h1 {
     border-top: 1px solid #DDD;
     padding-bottom: 2em;
     padding-top: 2em;
+}
+.vevent:last-child {
+    padding-bottom: 0;
 }
 .vevent dd,
 .output {
