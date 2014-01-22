@@ -717,3 +717,6 @@ h1 {
 .output {
     padding-bottom: 1em;
 }
+a.project {
+    border-bottom: 2px solid #6bacbf;
+}
