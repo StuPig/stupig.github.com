@@ -1,8 +1,11 @@
 (function($) {
     $.fn.typewriter = function(cb) {
-        this.each(function() {
+        var that = this;
+        that.each(function() {
             var $ele = $(this), str = $ele.html(), progress = 0;
             $ele.html('');
+            $(that).show();
+
             var timer = setInterval(function() {
                 var current = str.substr(progress, 1);
                 if (current == '<') {
