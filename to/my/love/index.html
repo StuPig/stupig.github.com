@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>致爱</title>
+        <style type="text/css">
+            body {
+                margin: 0;
+                padding: 0;
+                background: #ffe;
+                font-size: 12px;
+                overflow: auto;
+            }
+
+            #code {
+                float: left;
+                margin-top: 2em;
+                width: 440px;
+                color: #333;
+                font-family: Consolas,Monaco,"Bitstream Vera Sans Mono","Courier New",sans-serif;
+                font-size: 12px;
+            }
+
+            .wrap {
+                margin: 5em auto;
+                width: 960px;
+            }
+            .wrap:after {
+                content: ' ';
+                height: 0;
+                visibility: hidden;
+                clear: both;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <div id="code">
+                <p>2013年的5月21日</p>
+                <p>一场尴尬的约会</p>
+                <p>一节拥挤的车厢</p>
+                <p>一位少女，红衣白裙，长发飘飘</p>
+                <p>轻舞霓裳</p>
+                <br />
+                <p>那一天</p>
+                <p>握住了一双手</p>
+                <p>许下了一个承诺</p>
+                <br />
+                <p>纵生活有千般不易</p>
+                <p>你予我万种柔情</p>
+                <br />
+                <p>幸与君相知</p>
+                <p>愿与君相守</p>
+            </div>
+            <canvas id="c" class="rose"></canvas>
+        </div>
+        <script src="jquery.js"></script>
+        <script src="type.js"></script>
+        <script src="rose.js"></script>
+        <script>
+            $(function () {
+                $('#code').typewriter(function () {
+                    rose.initialize();
+                });
+            });
+        </script>
+    </body>
+</html>
