@@ -376,9 +376,15 @@ ul#options li#linkedin a:hover {
 
 #content {
     position: relative;
-    margin: 30px auto;
+    margin: 0 auto 30px;
     width: 980px;
     font-size: 1.4em;
+}
+
+.language {
+    text-align: right;
+    padding-right: 80px;
+    line-height: 2;
 }
 
 #content h3 {
@@ -587,7 +593,8 @@ aside#marshall {
 }
 
 @media print {
-    #nav-wrapper {
+    #nav-wrapper,
+    .language {
         display: none;
     }
 
