@@ -663,7 +663,8 @@ h1 {
 }
 
 .zh {
-    font-family: QXyingbikai15667;
+    font-family: QXyingbikai46763 !important;
+    letter-spacing: 13px;
 }
 
 .vevent dt {
