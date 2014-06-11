@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>接起TA的肥皂，赢一亿积分</title>
+    <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name='apple-touch-fullscreen' content='yes'>
+    <meta name="full-screen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <script>
+        var MT=MT||{};MT.TimeTracker={rt:1402493619674,st:Date.now()};window.addEventListener('load',function(){MT.TimeTracker.lt=Date.now()});document.addEventListener('DOMContentLoaded',function(e){MT.TimeTracker.dt=Date.now();var _el=document.getElementById('meituan_check'),log=function(c,h){var img=window['_'+Date.now()]=new Image(),d={ip:document.body.getAttribute('data-ip'),ua:window.navigator.userAgent,evs:[{nm:'ERROR',cate:c,url:encodeURIComponent(location.href)}]};if(h)d.evs[0].height=h;img.src='http://api.mobile.meituan.com/data/collect.json?type=i_stat&content='+JSON.stringify(d)};if(!_el){log('incomplete',document.body.offsetHeight)}else if(_el.offsetTop<100){log('pageheight',document.body.offsetHeight)}else if(_el.offsetHeight>1){log('cdn',_el.offsetHeight)}});MT.log={_logs:[],send:function(t,v){this._logs.push({type:t,value:v})}}
+    </script>
+    <link rel="stylesheet" href="css/basic.css" />
+    <style type="text/css">
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        canvas {
+            display: block;
+        }
+        .hand-1,
+        .hand-2,
+        .hand-3 {
+            position: absolute;
+            bottom: 0;
+            z-index: 1;
+        }
+        .soap,
+        .end {
+            top: 0;
+            left: 0;
+        }
+        .soap {
+            position: absolute;
+        }
+        .end,
+        .stop-watch {
+            position: absolute;
+            z-index: 3;
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+        .time {
+            position: absolute;
+            top: 50%;
+            margin-top: -70px;
+            font-size: 100px;
+            color: #fff;
+            text-align: center;
+            width: 100%;
+            font-family: serif;
+        }
+        .shade,
+        .guide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: #000;
+            opacity: .8;
+        }
+        .guide {
+            z-index: 3;
+            display: table;
+            opacity: 1;
+            background: transparent;
+        }
+        .guide .shade {
+            opacity: .8;
+            z-index: -1;
+        }
+        .tip-wrap {
+            display: table-cell;
+            vertical-align: middle;
+            width: 100%;
+            height: 216px;
+        }
+        .guide-pic {
+            height: 215px;
+            background: url(img//guide.png) no-repeat center;
+            width: 215px;
+            background-size: 215px 215px;
+            margin: 0 auto;
+            border-radius: 16px;
+        }
+        .check-points {
+            background: url(img/sprite.png) no-repeat -145px -161px;
+            background-size: 320px 560px;
+            position: absolute;
+            bottom: 20px;
+            width: 114px;
+            height: 55px;
+            margin-left: 50%;
+            left: -57px;
+        }
+        .dropped {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .start-game,
+        .end-game,
+        .ranking-game {
+            background: url(img/bg_3.png);
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 4;
+            font-size: 12px;
+            display: table;
+        }
+        .start-game span,
+        .end-game span {
+            display: inline-block;
+        }
+        .start-game-wrap,
+        .end-game-wrap {
+            display: table-cell;
+            vertical-align: middle;
+        }
+        .start-title {
+            background: url(img/sprite.png) no-repeat -35px -24px;
+            background-size: 320px 560px;
+            width: 232px;
+            height: 40px;
+            margin: 13px auto 5px;
+            display: block!important;
+        }
+        .point {
+            display: block!important;
+        }
+        .play-time {
+            background: url(img/sprite.png) no-repeat -232px -439px;
+            background-size: 320px 560px;
+            margin: 0 5px;
+            width: 50px;
+            height: 48px;
+        }
+        .play-time>i {
+            background: url(img/sprite.png) no-repeat -193px -351px;
+            background-size: 320px 560px;
+            width: 25px;
+            height: 36px;
+            display: none;
+            margin: 9px 0 0 15px;
+            -webkit-transform: rotate(30deg);
+        }
+        .play-btn {
+            height: 54px;
+        }
+        .left-5 .play-time>i {
+            display: block;
+        }
+        .left-4 .play-time:nth-child(1)>i,
+        .left-4 .play-time:nth-child(2)>i,
+        .left-4 .play-time:nth-child(3)>i,
+        .left-4 .play-time:nth-child(4)>i {
+            display: block;
+        }
+        .left-3 .play-time:nth-child(1)>i,
+        .left-3 .play-time:nth-child(2)>i,
+        .left-3 .play-time:nth-child(3)>i {
+            display: block;
+        }
+        .left-2 .play-time:nth-child(1)>i,
+        .left-2 .play-time:nth-child(2)>i {
+            display: block;
+        }
+        .left-1 .play-time:nth-child(1)>i {
+            display: block;
+        }
+        .play {
+            background: url(img/sprite.png) no-repeat -145px -223px;
+            background-size: 320px 560px;
+            width: 114px;
+            height: 55px;
+        }
+        .guide .play,
+        .guide .progress-wrap {
+            position: absolute;
+            bottom: 2.5em;
+            margin-left: -57px;
+            left: 50%;
+        }
+        .guide .progress-wrap {
+            top: 3em;
+            margin-left: -10em;
+            width: 20em;
+            overflow: hidden;
+            height: 1.5em;
+            background: #555;
+            -webkit-border-radius: 25px;
+            border-radius: 25px;
+            -webkit-box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
+            box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
+        }
+        .progress {
+            display: block;
+            height: 100%;
+            -webkit-border-top-right-radius: 8px;
+            -webkit-border-bottom-right-radius: 8px;
+            -moz-border-radius-topright: 8px;
+            -moz-border-radius-bottomright: 8px;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+            -webkit-transition: width .5s linear;
+            -webkit-border-top-left-radius: 20px;
+            -webkit-border-bottom-left-radius: 20px;
+            -moz-border-radius-topleft: 20px;
+            -moz-border-radius-bottomleft: 20px;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            background-color: rgb(43,194,83);
+            background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(43,194,83)), color-stop(1, rgb(84,240,84)) );
+            background-image: -moz-linear-gradient( center bottom, rgb(43,194,83) 37%, rgb(84,240,84) 69% );
+            -webkit-box-shadow: inset 0 2px 9px rgba(255,255,255,0.3), inset 0 -2px 6px rgba(0,0,0,0.4);
+            -moz-box-shadow: inset 0 2px 9px rgba(255,255,255,0.3), inset 0 -2px 6px rgba(0,0,0,0.4);
+            box-shadow: inset 0 2px 9px rgba(255,255,255,0.3), inset 0 -2px 6px rgba(0,0,0,0.4);
+            position: relative;
+            overflow: hidden;
+        }
+        .progress:after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.25, rgba(255, 255, 255, .2)), color-stop(.25, transparent), color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .2)), color-stop(.75, rgba(255, 255, 255, .2)), color-stop(.75, transparent), to(transparent) );
+            background-image: -moz-linear-gradient( -45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent );
+            z-index: 1;
+            -webkit-background-size: 50px 50px;
+            -moz-background-size: 50px 50px;
+            background-size: 50px 50px;
+            -webkit-animation: move 2s linear infinite;
+            -moz-animation: move 2s linear infinite;
+            -webkit-border-top-right-radius: 8px;
+            -webkit-border-bottom-right-radius: 8px;
+            -moz-border-radius-topright: 8px;
+            -moz-border-radius-bottomright: 8px;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+            -webkit-border-top-left-radius: 20px;
+            -webkit-border-bottom-left-radius: 20px;
+            -moz-border-radius-topleft: 20px;
+            -moz-border-radius-bottomleft: 20px;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            overflow: hidden;
+        }
+        @-webkit-keyframes move {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 50px 50px;
+            }
+        }
+        @-moz-keyframes move {
+             0% {
+                 background-position: 0 0;
+             }
+             100% {
+                 background-position: 50px 50px;
+             }
+         }
+        .ranking {
+            background: url(img/sprite.png) no-repeat -26px -293px;
+        }
+        .share,
+        .share-score {
+            background: url(img/sprite.png) no-repeat -82px -293px;
+        }
+        .ranking,
+        .share,
+        .share-score {
+            display: inline-block;
+            background-size: 320px 560px;
+            width: 59px;
+            height: 42px;
+        }
+        .intro-game {
+            text-align: left;
+            width: 252px;
+            margin: 0 auto;
+            font-size: 12px;
+            line-height: 1.5em;
+        }
+        .end-score {
+            color: #FFF;
+            font-size: 2em;
+            text-shadow: 1px 2px 3px #333;
+        }
+        .end-score strong {
+            padding-left: 10px;
+            color: #FF0;
+            font-size: 1.5em;
+        }
+        .line {
+            margin: 1px 0 0;
+        }
+        .left-times {
+            font-size: 18px;
+            color: #000;
+            margin: 0 2px;
+        }
+        .level-f {
+            background: url(img/sprite.png) no-repeat -266px -238px;
+            width: 37px;
+            height: 72px;
+        }
+        .level-e {
+            background: url(img/sprite.png) no-repeat -265px -161px;
+            width: 38px;
+            height: 71px;
+        }
+        .level-d {
+            background: url(img/sprite.png) no-repeat -233px -75px;
+            width: 47px;
+            height: 71px;
+        }
+        .level-s {
+            background: url(img/sprite.png) no-repeat -185px -75px;
+            width: 46px;
+            height: 73px;
+        }
+        .level-c {
+            background: url(img/sprite.png) no-repeat -135px -74px;
+            width: 48px;
+            height: 73px;
+        }
+        .level-b {
+            background: url(img/sprite.png) no-repeat -86px -76px;
+            width: 48px;
+            height: 71px;
+        }
+        .level-a {
+            background: url(img/sprite.png) no-repeat -35px -77px;
+            width: 50px;
+            height: 71px;
+        }
+        .level {
+            background-size: 320px 560px;
+            margin-right: 10px;
+        }
+        .lottery {
+            background: url(img/sprite.png) no-repeat -24px -161px;
+            background-size: 320px 560px;
+            width: 114px;
+            height: 55px;
+            display: none;
+        }
+        .remain-times {
+            font: bolder 12px simhei;
+            color: #333;
+            max-width: 80%;
+        }
+        .control {
+            position: absolute;
+            top: 20px;
+            right: 0;
+            z-index: 2;
+            width: 45px;
+            height: 150px;
+        }
+        .exit {
+            background: url(img/sprite.png) no-repeat -33px -496px;
+            background-size: 400px 700px;
+            width: 52px;
+            height: 49px;
+        }
+        .exit:hover {
+            background: url(img/sprite.png) no-repeat -33px -448px;
+            background-size: 400px 700px;
+        }
+        .restart {
+            background: url(img/sprite.png) no-repeat -158px -494px;
+            background-size: 400px 700px;
+            width: 52px;
+            height: 51px;
+        }
+        .restart:hover {
+            background: url(img/sprite.png) no-repeat -160px -444px;
+            background-size: 400px 700px;
+        }
+        .pause {
+            background: url(img/sprite.png) no-repeat -97px -494px;
+            background-size: 400px 700px;
+            width: 52px;
+            height: 49px;
+        }
+        .resume {
+            background: url(img/sprite.png) no-repeat -97px -447px;
+            background-size: 400px 700px;
+            width: 52px;
+            height: 49px;
+        }
+        .points {
+            height: 27px;
+            width: 100%;
+            background: -webkit-linear-gradient(left, #8cd94e, #78cf49);
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        .points>img {
+            width: 280px;
+            margin-top: -18px;
+        }
+        .soap-msg {
+            font-size: 12px;
+            color: #555;
+        }
+        .soap-msg-tip {
+            font-size: 14px;
+            color: #333;
+            text-align: center;
+        }
+        .msg-score-wrap {
+            line-height: 2.5em;
+        }
+        .msg-score-wrap>span {
+            margin-right: 1.5em;
+        }
+        .msg-score,
+        .msg-level {
+            font-size: 16px;;
+        }
+        .msg-title {
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 2em;
+            margin-bottom: .5em;
+        }
+        .msg-content {
+            color: #bf7130;
+        }
+        .total-score-wrap {
+            margin-top: 2em;
+        }
+        .total-score-wrap,
+        .total-ranking-wrap {
+            font-size: 1.5em;
+            color: #333;
+            font-weight: bold;
+            line-height: 1.5em;
+        }
+        .total-score,
+        .total-ranking {
+            text-shadow: 0 0 3px #000;
+            font-size: 1.4em;
+        }
+        .total-score {
+            color: #ffd700;
+        }
+        .total-ranking {
+            color: #f3a600;
+        }
+        .share-ranking {
+            background: url(img/share.png) no-repeat center;
+            background-size: 109px 50px;
+            width: 109px;
+            height: 50px;
+            margin: .5em auto;
+        }
+        .ranking-title {
+            background: url(img/master.png) no-repeat center;
+            background-size: 274px 34px;
+            width: 274px;
+            height: 34px;
+            margin: 1em auto .5em;
+        }
+        .ranking-table-wrap {
+            height: 190px;
+            overflow-y: scroll;
+        }
+        .ranking-table {
+            width: 250px;
+            margin: 0 auto;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 0 0 3px #333;
+            table-layout: fixed;
+            text-align: left;
+        }
+        .ranking-btn {
+            height: 40px;
+        }
+        .number,
+        .name,
+        .score {
+            text-overflow:ellipsis;
+            white-space:nowrap;
+            overflow:hidden;
+            font-size: 1.3em;
+        }
+        .level-tips {
+            padding: 0 2em;
+            color: #333;
+            display: block!important;
+        }
+        .point {
+            color: #333;
+        }
+    </style>
+
+
+</head>
+<body data-pid="110001" data-ip="192.168.0.109">
+
+
+<div id="tips"></div>
+
+    <div class="start-game">
+        <div class="start-game-wrap">
+            <div class="line">
+                <span class="start-title"></span>
+            </div>
+            <div class="line left-soaps">
+                <span class="play-time"><i></i></span>
+                <span class="play-time"><i></i></span>
+                <span class="play-time"><i></i></span>
+            </div>
+                <div class="line">
+                        <span class="remain-times">你今天的免费抽奖机会已用完，明天还有噢~ 花10积分可再抽奖一次</span>
+                </div>
+            <div class="line play-btn">
+                <span class="play"></span>
+            </div>
+            <div class="line ranking-btn">
+                <span class="ranking"></span>
+                <span class="share" gaevent="imt/soap/share/link"></span>
+            </div>
+            <div class="line">
+                <span class="intro-game">游戏规则：<br />达到E级别(超过100分)，就有机会获得5-500积分不等的奖励，分数(级别)越高，获奖几率越大</span>
+            </div>
+            <div class="points">
+                <img src="img/points.png" />
+            </div>
+        </div>
+    </div>
+
+    <div class="end-game" style="display: none">
+        <div class="end-game-wrap">
+            <div class="line">
+                <span class="end-score">本次得分<strong></strong></span>
+            </div>
+            <div class="line">
+                <span class="level-tips"></span>
+                <span class="level level-f" data-level="f"></span><span id="lottery" class="lottery"></span>
+                <span class="point">当前积分：<strong class="current-point"></strong></span>
+            </div>
+            <div class="line left-soaps">
+                <span class="play-time"><i></i></span>
+                <span class="play-time"><i></i></span>
+                <span class="play-time"><i></i></span>
+            </div>
+            <div class="line">
+                <span class="remain-times">你今天还有<em class="left-times"></em>次免费抽奖的机会，用完明天还有噢~</span>
+            </div>
+            <div class="line play-btn">
+                <span class="play"></span>
+            </div>
+            <div class="line ranking-btn">
+                <span class="ranking"></span>
+                <span class="share-score" gaevent="imt/soap/share/score"></span>
+            </div>
+        </div>
+    </div>
+
+    <div id="guide" class="guide" style="display: none">
+        <div class="tip-wrap">
+            <div class="progress-wrap">
+                <span id="progress" class="progress"></span>
+            </div>
+            <div class="guide-pic"></div>
+            <div class="play"></div>
+        </div>
+        <div class="shade"></div>
+    </div>
+
+    <div id="stop_watch" class="stop-watch">
+        <div class="shade"></div>
+        <p id="time" class="time"></p>
+    </div>
+
+    <div id="ranking_game" class="ranking-game" style="display: none">
+        <div class="total-score-wrap">
+            <span>您的累计得分为</span>
+            <strong id="total_score" class="total-score"></strong>
+        </div>
+        <div class="total-ranking-wrap">
+            <span>您当前的排名为</span>
+            <strong id="total_ranking" class="total-ranking"></strong>
+        </div>
+        <div class="share-ranking" gaevent="imt/soap/share/rank"></div>
+        <div class="ranking-detail">
+            <div class="ranking-title"></div>
+            <div class="ranking-table-wrap">
+                <table class="ranking-table" id="ranking_table">
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- 背景层 -->
+    <canvas id="bg" class="bg"></canvas>
+    <!-- 小手层 -->
+    <canvas id="hand_1" width="83" height="82" class="hand-1"></canvas>
+    <canvas id="hand_2" width="83" height="82" class="hand-2"></canvas>
+    <canvas id="hand_3" width="83" height="82" class="hand-3"></canvas>
+    <!-- 肥皂层 -->
+    <canvas id="soap" class="soap"></canvas>
+    <!-- 游戏结束层 -->
+    <div id="end" class="end">
+        <div class="shade"></div>
+        <img class="dropped" src="img/dropped.png" width="258" />
+        <div class="check-points"></div>
+    </div>
+    <!-- 控制层 -->
+    <div id="control" class="control">
+        <div id="exit" class="exit"></div>
+        <div id="restart" class="restart"></div>
+        <div id="pause" class="pause"></div>
+    </div>
+<script type="text/javascript">
+    var ASSETS = {
+                sprite: ["img/sprite.png", 'img'],
+                guide: ["img/guide.png", 'img'],
+                gotSoap: ["audio/got_soap.mp3", 'audio'],
+                missSoap: ["audio/miss_soap.mp3", 'audio'],
+                tossSoap: ["audio/toss_soap.mp3", 'audio'],
+                dropped: ["img/dropped.png", 'img'],
+                share: ["img/share.png", 'img'],
+                master: ["img/master.png", 'img']
+    },
+        loginUrl = '',
+        bindUrl = '',
+        leftTimes = 3,
+        shareUrl = '',
+        shareLink = 'http://stupig.me/funny/soap?utm_source=share&utm_term=i_weibo_soapactivity',
+        shareContent = '春暖花开，少年，一起来上【接肥皂赢积分】可好？得分越高获奖机会就越高，肥皂千万不要掉哈~~PS：积分能当钱用哦！#接起TA的肥皂，赢一亿积分#',
+        shareImg = 'http://stupig.me/funny/soap/img/share.jpg',
+        SOAP_STAT_URL = 'action/soapstat.json',
+        LOTTERY_URL = 'action/soap.json',
+        RANKING_URL = 'action/soapranking.json';
+
+    document.addEventListener('WeixinJSBridgeReady', function() {
+
+        var WJ = WeixinJSBridge,
+            config = {
+                img_url: shareImg,
+                desc: shareContent,
+                link: shareLink,
+                title: '接起TA的肥皂，赢一亿积分'
+            };
+        // 发送给好友
+        WJ.on('menu:share:appmessage', function() {
+            WJ.invoke('sendAppMessage', config);
+        });
+        // 发送到朋友圈
+        WJ.on('menu:share:timeline', function() {
+            WJ.invoke('shareTimeline', config);
+        });
+
+        // 发送到微博
+        WJ.on('menu:share:weibo', function() {
+            WJ.invoke('shareWeibo', config);
+        });
+
+        // 隐藏导航栏，对应的展示参数是：showToolbar
+        WJ.call('hideToolbar');
+
+        setTimeout(function () {
+            soapInit();
+        }, 50);
+    });
+</script>
+<script src="js/fastclick.js"></script>
+<script src="js/zepto.debug.js"></script>
+<script src="js/mjs.js"></script>
+<script src="js/msg.js"></script>
+<script src="js/mpop.js"></script>
+<script src="js/mpop_share.js"></script>
+<script src="js/soap.js"></script>
+<script>
+// 添加到主屏幕时js接管<a>
+(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i,chref;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(chref=d.href).replace(e.href,"").indexOf("#")&&chref&&(!/^[a-z\+\.\-]+:/i.test(chref)||chref.indexOf(e.protocol+"//"+e.host)===0)&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone");
+</script>
+</body>
+</html>
