@@ -1458,7 +1458,7 @@ $(function () {
         src.buffer = buffer;
 
         gainNode = (audioContext.createGainNode && audioContext.createGainNode())
-            || audioContext.createGain();
+            || audioContext.createGain(); // note: on older systems, may have to use deprecated createGainNode()
         src.connect(gainNode);
 
         gainNode.connect(audioContext.destination);
@@ -1472,7 +1472,8 @@ $(function () {
         if (opt.loop)
             src.loop = true;
 
-        src.noteOn(0);
+        (src.noteOn && src.noteOn(0))
+            || (src.start(0)); // note: on older systems, may have to use deprecated noteOn(time);
 
         cb(src);
     }
