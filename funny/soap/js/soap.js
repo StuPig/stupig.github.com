@@ -1457,7 +1457,8 @@ $(function () {
 
         src.buffer = buffer;
 
-        gainNode = audioContext.createGainNode();
+        gainNode = (audioContext.createGainNode && audioContext.createGainNode())
+            || audioContext.createGain();
         src.connect(gainNode);
 
         gainNode.connect(audioContext.destination);
